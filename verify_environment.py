@@ -123,11 +123,6 @@ def check_and_generate_data(repo_root: Path) -> bool:
             all_present = False
 
     return all_present
-        else:
-            print(f"  [FAIL] {case_name:<30} ({present_count}/{len(files)} raw files found)")
-            all_present = False
-
-    return all_present
 
 
 def main() -> int:
