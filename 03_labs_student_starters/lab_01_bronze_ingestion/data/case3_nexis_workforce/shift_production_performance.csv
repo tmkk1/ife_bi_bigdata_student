@@ -1,0 +1,169 @@
+shift_date,shift_code,assembly_line_id,line_name,product_category,target_output_units,actual_produced_units,good_units,scrap_defect_units,rework_units,scrap_cost_eur,line_stoppage_min,operator_headcount_present,agency_worker_count,agency_staffing_ratio_pct
+2026-10-01,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,661,639,22,14,770.0,6.1,10,1,10.0
+2026-10-01,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,454,416,38,24,836.0,74.5,10,3,30.0
+2026-10-01,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,478,426,52,36,1820.0,62.9,8,3,37.5
+2026-10-01,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,615,606,9,5,198.0,24.5,8,0,0.0
+2026-10-01,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,598,581,17,10,595.0,8.2,10,1,10.0
+2026-10-01,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,494,442,52,31,1144.0,63.5,10,4,40.0
+2026-10-01,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,463,415,48,26,1680.0,66.3,8,3,37.5
+2026-10-01,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,617,600,17,9,374.0,22.1,8,1,12.5
+2026-10-01,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,609,595,14,9,490.0,10.5,10,0,0.0
+2026-10-01,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,470,415,55,38,1210.0,69.4,10,4,40.0
+2026-10-01,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,448,377,71,47,2485.0,56.6,8,5,62.5
+2026-10-01,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,644,630,14,7,308.0,18.5,8,0,0.0
+2026-10-02,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,663,650,13,8,455.0,18.7,10,0,0.0
+2026-10-02,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,452,443,9,6,198.0,22.2,10,0,0.0
+2026-10-02,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,483,471,12,8,420.0,32.9,8,0,0.0
+2026-10-02,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,609,595,14,8,308.0,31.5,8,0,0.0
+2026-10-02,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,658,641,17,8,595.0,22.1,10,1,10.0
+2026-10-02,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,470,452,18,11,396.0,32.1,10,1,10.0
+2026-10-02,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,488,480,8,5,280.0,14.5,8,0,0.0
+2026-10-02,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,601,590,11,7,242.0,5.0,8,0,0.0
+2026-10-02,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,611,594,17,9,595.0,19.1,10,0,0.0
+2026-10-02,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,455,444,11,8,242.0,29.7,10,1,10.0
+2026-10-02,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,491,477,14,8,490.0,32.9,8,1,12.5
+2026-10-02,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,617,608,9,5,198.0,27.0,8,1,12.5
+2026-10-03,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,665,570,95,43,3325.0,75.0,10,5,50.0
+2026-10-03,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,478,422,56,28,1232.0,69.7,10,4,40.0
+2026-10-03,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,443,383,60,36,2100.0,70.9,8,4,50.0
+2026-10-03,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,599,496,103,51,2266.0,64.5,8,5,62.5
+2026-10-03,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,612,542,70,41,2450.0,48.9,10,4,40.0
+2026-10-03,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,491,448,43,19,946.0,64.5,10,3,30.0
+2026-10-03,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,479,410,69,40,2415.0,70.9,8,5,62.5
+2026-10-03,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,630,533,97,48,2134.0,62.4,8,5,62.5
+2026-10-03,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,661,600,61,39,2135.0,62.9,10,3,30.0
+2026-10-03,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,464,413,51,33,1122.0,44.0,10,4,40.0
+2026-10-03,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,447,385,62,42,2170.0,61.3,8,4,50.0
+2026-10-03,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,632,541,91,38,2002.0,68.7,8,5,62.5
+2026-10-04,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,607,541,66,43,2310.0,67.6,10,4,40.0
+2026-10-04,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,449,401,48,24,1056.0,64.0,10,4,40.0
+2026-10-04,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,468,412,56,36,1960.0,63.8,8,4,50.0
+2026-10-04,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,633,553,80,40,1760.0,56.4,8,4,50.0
+2026-10-04,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,622,565,57,33,1995.0,56.3,10,3,30.0
+2026-10-04,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,448,398,50,34,1100.0,72.5,10,4,40.0
+2026-10-04,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,487,425,62,41,2170.0,62.7,8,4,50.0
+2026-10-04,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,667,560,107,47,2354.0,54.7,8,5,62.5
+2026-10-04,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,611,529,82,35,2870.0,46.9,10,5,50.0
+2026-10-04,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,473,432,41,29,902.0,64.7,10,3,30.0
+2026-10-04,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,475,404,71,38,2485.0,61.2,8,5,62.5
+2026-10-04,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,624,523,101,47,2222.0,78.3,8,5,62.5
+2026-10-05,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,637,620,17,11,595.0,24.0,10,0,0.0
+2026-10-05,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,449,442,7,5,154.0,11.0,10,0,0.0
+2026-10-05,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,450,442,8,5,280.0,19.5,8,0,0.0
+2026-10-05,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,635,625,10,4,220.0,17.2,8,1,12.5
+2026-10-05,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,621,601,20,12,700.0,15.0,10,1,10.0
+2026-10-05,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,487,476,11,8,242.0,13.7,10,0,0.0
+2026-10-05,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,477,466,11,6,385.0,32.3,8,0,0.0
+2026-10-05,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,637,620,17,8,374.0,19.1,8,1,12.5
+2026-10-05,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,647,633,14,6,490.0,34.5,10,0,0.0
+2026-10-05,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,451,437,14,8,308.0,22.4,10,0,0.0
+2026-10-05,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,472,456,16,9,560.0,11.9,8,0,0.0
+2026-10-05,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,645,634,11,7,242.0,11.7,8,0,0.0
+2026-10-06,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,638,620,18,9,630.0,17.8,10,1,10.0
+2026-10-06,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,488,474,14,7,308.0,26.0,10,1,10.0
+2026-10-06,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,455,439,16,8,560.0,38.9,8,1,12.5
+2026-10-06,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,611,594,17,9,374.0,19.0,8,1,12.5
+2026-10-06,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,662,652,10,5,350.0,20.7,10,0,0.0
+2026-10-06,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,489,482,7,3,154.0,22.5,10,1,10.0
+2026-10-06,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,449,436,13,8,455.0,23.8,8,1,12.5
+2026-10-06,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,655,636,19,13,418.0,20.8,8,0,0.0
+2026-10-06,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,638,619,19,11,665.0,20.5,10,0,0.0
+2026-10-06,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,453,442,11,7,242.0,24.5,10,1,10.0
+2026-10-06,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,475,464,11,6,385.0,24.6,8,1,12.5
+2026-10-06,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,664,652,12,7,264.0,21.1,8,1,12.5
+2026-10-07,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,650,640,10,7,350.0,8.6,10,1,10.0
+2026-10-07,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,473,425,48,24,1056.0,55.6,10,3,30.0
+2026-10-07,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,480,418,62,28,2170.0,66.9,8,4,50.0
+2026-10-07,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,632,623,9,4,198.0,21.4,8,1,12.5
+2026-10-07,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,606,596,10,6,350.0,25.1,10,0,0.0
+2026-10-07,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,444,406,38,22,836.0,68.7,10,3,30.0
+2026-10-07,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,448,406,42,19,1470.0,62.3,8,3,37.5
+2026-10-07,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,650,640,10,4,220.0,21.7,8,1,12.5
+2026-10-07,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,645,634,11,6,385.0,24.2,10,1,10.0
+2026-10-07,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,447,396,51,25,1122.0,77.5,10,4,40.0
+2026-10-07,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,459,411,48,19,1680.0,58.3,8,3,37.5
+2026-10-07,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,624,608,16,11,352.0,39.0,8,1,12.5
+2026-10-08,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,613,593,20,12,700.0,21.5,10,1,10.0
+2026-10-08,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,443,431,12,5,264.0,14.7,10,0,0.0
+2026-10-08,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,461,452,9,4,315.0,27.4,8,1,12.5
+2026-10-08,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,624,604,20,9,440.0,12.7,8,1,12.5
+2026-10-08,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,602,593,9,6,315.0,31.2,10,0,0.0
+2026-10-08,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,456,448,8,5,176.0,28.4,10,1,10.0
+2026-10-08,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,475,458,17,8,595.0,24.0,8,0,0.0
+2026-10-08,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,642,630,12,8,264.0,17.4,8,1,12.5
+2026-10-08,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,624,600,24,16,840.0,17.2,10,1,10.0
+2026-10-08,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,494,484,10,5,220.0,18.8,10,1,10.0
+2026-10-08,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,447,440,7,5,245.0,14.0,8,0,0.0
+2026-10-08,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,653,643,10,6,220.0,20.2,8,0,0.0
+2026-10-09,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,605,586,19,10,665.0,24.0,10,0,0.0
+2026-10-09,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,470,463,7,4,154.0,33.0,10,0,0.0
+2026-10-09,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,443,434,9,6,315.0,19.4,8,1,12.5
+2026-10-09,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,616,607,9,5,198.0,16.0,8,0,0.0
+2026-10-09,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,618,607,11,5,385.0,25.0,10,1,10.0
+2026-10-09,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,470,459,11,6,242.0,16.5,10,1,10.0
+2026-10-09,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,443,434,9,4,315.0,38.4,8,0,0.0
+2026-10-09,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,657,647,10,7,220.0,18.9,8,0,0.0
+2026-10-09,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,657,643,14,6,490.0,22.5,10,1,10.0
+2026-10-09,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,467,450,17,7,374.0,31.0,10,0,0.0
+2026-10-09,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,459,450,9,5,315.0,37.1,8,1,12.5
+2026-10-09,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,646,636,10,4,220.0,25.1,8,0,0.0
+2026-10-10,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,603,518,85,52,2975.0,67.5,10,5,50.0
+2026-10-10,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,484,419,65,32,1430.0,74.7,10,5,50.0
+2026-10-10,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,452,403,49,28,1715.0,78.6,8,3,37.5
+2026-10-10,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,619,557,62,32,1364.0,63.2,8,3,37.5
+2026-10-10,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,602,540,62,34,2170.0,60.8,10,4,40.0
+2026-10-10,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,451,395,56,35,1232.0,68.1,10,5,50.0
+2026-10-10,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,479,417,62,42,2170.0,56.9,8,4,50.0
+2026-10-10,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,635,577,58,37,1276.0,65.7,8,3,37.5
+2026-10-10,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,600,530,70,45,2450.0,66.9,10,5,50.0
+2026-10-10,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,481,434,47,27,1034.0,76.4,10,4,40.0
+2026-10-10,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,449,375,74,32,2590.0,71.9,8,5,62.5
+2026-10-10,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,656,563,93,61,2046.0,72.8,8,4,50.0
+2026-10-11,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,623,572,51,28,1785.0,78.7,10,3,30.0
+2026-10-11,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,465,405,60,24,1320.0,61.5,10,5,50.0
+2026-10-11,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,447,389,58,38,2030.0,72.6,8,4,50.0
+2026-10-11,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,605,535,70,42,1540.0,81.5,8,4,50.0
+2026-10-11,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,641,568,73,38,2555.0,70.1,10,4,40.0
+2026-10-11,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,444,399,45,19,990.0,58.0,10,3,30.0
+2026-10-11,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,483,415,68,36,2380.0,62.9,8,5,62.5
+2026-10-11,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,611,522,89,43,1958.0,66.2,8,4,50.0
+2026-10-11,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,665,580,85,49,2975.0,79.4,10,5,50.0
+2026-10-11,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,475,422,53,35,1166.0,57.4,10,4,40.0
+2026-10-11,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,456,410,46,27,1610.0,53.1,8,3,37.5
+2026-10-11,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,599,523,76,43,1672.0,75.2,8,4,50.0
+2026-10-12,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,627,600,27,15,945.0,9.7,10,1,10.0
+2026-10-12,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,453,441,12,7,264.0,20.9,10,1,10.0
+2026-10-12,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,449,433,16,8,560.0,5.0,8,1,12.5
+2026-10-12,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,639,621,18,9,396.0,21.8,8,0,0.0
+2026-10-12,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,657,645,12,7,420.0,32.8,10,1,10.0
+2026-10-12,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,473,466,7,5,154.0,23.3,10,1,10.0
+2026-10-12,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,489,482,7,4,245.0,12.4,8,1,12.5
+2026-10-12,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,657,647,10,4,220.0,15.6,8,0,0.0
+2026-10-12,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,605,595,10,5,350.0,21.5,10,0,0.0
+2026-10-12,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,481,472,9,6,198.0,13.1,10,0,0.0
+2026-10-12,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,475,464,11,6,385.0,29.3,8,1,12.5
+2026-10-12,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,604,590,14,7,308.0,40.8,8,1,12.5
+2026-10-13,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,636,621,15,10,525.0,16.3,10,1,10.0
+2026-10-13,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,462,407,55,27,1210.0,62.0,10,5,50.0
+2026-10-13,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,447,404,43,25,1505.0,74.5,8,3,37.5
+2026-10-13,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,648,634,14,7,308.0,24.1,8,0,0.0
+2026-10-13,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,658,642,16,9,560.0,39.3,10,1,10.0
+2026-10-13,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,463,415,48,29,1056.0,54.4,10,4,40.0
+2026-10-13,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,445,401,44,24,1540.0,68.0,8,3,37.5
+2026-10-13,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,639,629,10,5,220.0,15.5,8,1,12.5
+2026-10-13,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,654,644,10,6,350.0,21.4,10,0,0.0
+2026-10-13,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,483,420,63,30,1386.0,60.5,10,5,50.0
+2026-10-13,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,460,416,44,29,1540.0,69.5,8,3,37.5
+2026-10-13,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,614,603,11,7,242.0,11.1,8,0,0.0
+2026-10-14,S1,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,628,610,18,11,630.0,9.9,10,1,10.0
+2026-10-14,S1,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,454,447,7,3,154.0,28.2,10,1,10.0
+2026-10-14,S1,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,451,444,7,3,245.0,11.7,8,0,0.0
+2026-10-14,S1,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,627,610,17,11,374.0,22.5,8,0,0.0
+2026-10-14,S2,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,649,639,10,4,350.0,21.1,10,1,10.0
+2026-10-14,S2,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,462,451,11,5,242.0,7.3,10,0,0.0
+2026-10-14,S2,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,479,468,11,8,385.0,8.9,8,1,12.5
+2026-10-14,S2,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,654,632,22,9,484.0,27.5,8,1,12.5
+2026-10-14,S3,LINE_01,SMT Surface Mount & Optical QA,PCBA_Surface_Mount,650,617,596,21,9,735.0,7.0,10,0,0.0
+2026-10-14,S3,LINE_02,Precision Through-Hole Soldering,Through_Hole_Soldered_Boards,480,467,460,7,3,154.0,14.9,10,1,10.0
+2026-10-14,S3,LINE_03,Medical Sensor Assembly & Cleanroom,Medical_Diagnostic_Sensors,480,444,437,7,4,245.0,17.5,8,0,0.0
+2026-10-14,S3,LINE_04,Automotive ECU Packaging & Test,Automotive_Control_Units,650,607,593,14,8,308.0,26.9,8,1,12.5

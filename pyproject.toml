@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bi-bigdata-engineering-course"
+version = "1.0.0"
+description = "Course materials and reference solutions for Business Intelligence and Big Data Analysis (01 31 0367 00)"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "University Course Developer & BI Architect", email = "course-admin@university.edu" }
+]
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "openpyxl>=3.1.2",
+    "duckdb>=1.1.0",
+    "pyarrow>=17.0.0",
+    "matplotlib>=3.9.0",
+    "seaborn>=0.13.2",
+    "plotly>=5.24.0",
+    "streamlit>=1.39.0",
+    "jupyterlab>=4.2.0",
+    "rich>=13.8.0",
+    "tabulate>=0.9.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["02_data_generator*", "05_case_studies_reference_solutions*"]
