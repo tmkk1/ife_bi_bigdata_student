@@ -36,9 +36,11 @@ function Write-Err([string]$Message) {
 }
 
 function Refresh-SessionPath {
-    $machinePath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
-    $userPath = [System.Environment]::GetEnvironmentVariable("Path", "User")
-    $env:Path = "$userPath;$machinePath"
+    $machinePath = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+    $userPath    = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
+    
+    $combined = @($userPath, $machinePath) | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    $env:Path = $combined -join ";"
 }
 
 Write-Step "STEP 1: Evaluating Local Windows Environment"
