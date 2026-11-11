@@ -22,130 +22,91 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 
 ### **Skąd wziąć dane (Realne zbiory Open Source do połączenia):**
 
-* **Zbiór bazowy 1 (Kaggle):** *AI4I 2020 Predictive Maintenance Dataset* (autor: Stephan Matzka / UCI) – zawiera 10 000 rekordów z czujników maszyn (temperatura procesu, prędkość obrotowa, moment obrotowy, zużycie narzędzia) oraz flagi konkretnych typów awarii (TWF, HDF, PWF, OSF).
+* **Zbiór bazowy 1 (Kaggle):** *AI4I 2020 Predictive Maintenance Dataset* (autor: Stephan Matzka / UCI) – baza fizyczna dla symulacji parametrów pracy pras hydraulicznych na horyzoncie **60 dni** (`2026-10-01` – `2026-11-30`) z podziałem na **3 natywne formaty** (`sensor_telemetry.csv`, `maintenance_logs.json`, `machines_and_shifts.xlsx`).
 
-* **Zbiór bazowy 2 (Kaggle):** *Manufacturing Production Line Performance / Factory Downtime Logs* (lub wygenerowana tabela zleceń produkcyjnych production\_batches.csv oraz słownik maszyn machines\_dict.xlsx).
-
-* *Wskazówka techniczna:* Zbiór AI4I 2020 można w 3 minuty wzbogacić w Pythonie o znaczniki czasu (timestamp), przypisać do 4 różnych linii produkcyjnych i 3 zmian roboczych, a tabelę słownikową maszyn i operatorów wydzielić do osobnego pliku Excel/JSON, aby studenci mieli co integrować w Tygodniu 2\.
-
-### **ONE-PAGER 1 (Gotowy materiał dla studentów)**
+### **ONE-PAGER 1 (Gotowy materiał dla studentów — 60-Day Simulation)**
 
 **CASE STUDY \#1: SmartPress Automotive – Shopfloor Performance & OEE Analytics**
 
-**1\. Business Context** SmartPress Automotive is a Tier-1 supplier of stamped metal components for the European automotive industry. Over the past two quarters, the plant in Central Poland has experienced a noticeable drop in production efficiency and a spike in unplanned machine stops. The Management Board has raw data dumps from the shopfloor SCADA sensors, the Maintenance ticketing system, and the ERP shift schedule, but lacks a unified Business Intelligence system to diagnose the root causes.
+**1\. Business Context** SmartPress Automotive is a Tier-1 supplier of stamped metal components for the European automotive industry. Over the 60-day diagnostic window (`2026-10-01` – `2026-11-30`), the plant in Central Poland has experienced a noticeable drop in production efficiency (`70.38%` OEE) and high unplanned stops. Management has raw exports from SCADA sensors, the CMMS ticketing system, and ERP master schedules, and needs a unified BI system that eliminates join fan-out traps (`480.0 min` exact shift capacity).
+
+**2\. Source Data Architecture (Your Data Pack — 3 Native Formats)**
+
+* **`sensor_telemetry.csv` (SCADA System):** 23,164 high-frequency logs (`machine_id`, `timestamp`, air & process temperature, rotational speed RPM, torque Nm, tool wear min, and output/defects). *(Injected DQ anomalies quarantined at Gate 1: out-of-window dates, negative RPM, impossible wear).*
+* **`maintenance_logs.json` (CMMS System):** 286 planned/unplanned tickets, failure mode codes (`TWF`, `HDF`, `PWF`, `OSF`), repair duration (`MTTR`), and direct maintenance costs.
+* **`machines_and_shifts.xlsx` (ERP Master Data):** 3 tabs (`Machines`, `Shifts` with `480.0 min` nominal capacity, and `Product_Variants` `L`/`M`/`H`).
+
+**3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**
+
+* **Integration (ELT - Lab 02 Bronze):** Ingest `CSV + JSON + XLSX`, quarantine bad telemetry/tickets into `quarantine_errors.parquet`, and avoid double-counting capacity across high-frequency sensor rows.
+* **Dimensional Modeling (Gold):** Build a Kimball Star Schema centered on `Fact_Shift_Production` (exact `480.0 min` grain) and `Fact_Maintenance_Events`, linked to `Dim_Machine`, `Dim_Shift`, `Dim_Product_Variant`, `Dim_Failure_Mode`, and `Dim_Date`.
+* **Synthetic Metrics (KPIs):** **OEE = Availability × Performance × Quality**, **MTBF**, **MTTR**, **Scrap Cost (EUR)**, and breakdown correlation with `tool_wear > 180 min`.
+
+**4\. Dual Storytelling Perspectives (Track A vs Track B):**
+
+* **Group A Focus – Chief Operations Officer (COO):** Shift-by-shift OEE bottlenecks (e.g., `S3 PRESS_02` Variant `H`), capacity utilization, and scrap EUR impact.
+* **Group B Focus – Head of Maintenance & Reliability:** Tool-wear threshold degradation (`> 180 min` driving breakdowns), failure Pareto (`TWF`/`HDF`), and MTTR reduction ROI.
+
+## **CASE STUDY 2: Przemysłowa Dystrybucja Hydrauliki, OTIF i Marża Net (DataCo)**
+
+*(Industrial Hydraulics Supply Chain, WMS Logistics & Net Margin Analytics)*
+
+### **Skąd wziąć dane:**
+
+* *Architektura pakietu 60-dniowego:* Pełna symulacja **60 dni** (`2026-10-01` – `2026-11-30`) w **3 heterogenicznych formatach** (`order_items_trans.csv`, `shipment_events.json`, `master_catalog.xlsx`), eliminująca ryzyko mnożenia sum zamówienia przez wielokrotne zdarzenia WMS.
+
+### **ONE-PAGER 2 (Gotowy materiał dla studentów — 60-Day Simulation)**
+
+**CASE STUDY \#2: DataCo Industrial Hydraulics – Supply Chain & Net Margin Intelligence**
+
+**1\. Business Context** DataCo distributes heavy industrial hydraulics (`Hoses`, `Pumps`, `Valves`, `Filters`) across European regional hubs (`HUB-South-Katowice`, `HUB-Central-Lodz`, etc.). Despite €29.95M net sales over 60 days, overall OTIF has fallen to `74.07%` and SLA penalties + freight surcharges erode profitability—particularly on `VIP Heavy OEM` accounts.
+
+**2\. Source Data Architecture (Your Data Pack — 3 Native Formats)**
+
+* **`order_items_trans.csv` (ERP Sales Module):** 8,623 transaction lines across 4,774 orders (`ordered_qty`, `delivered_qty`, unit price, discount %, tax, COGS).
+* **`shipment_events.json` (WMS / Carrier Telemetry):** 22,746 multi-milestone events (`PICKED`, `PACKED`, `DISPATCHED`, `DELIVERED`), warehouse dwell times, carrier codes, and SLA penalty triggers.
+* **`master_catalog.xlsx` (MDM System):** 4 tabs (`Products`, `Customers`, `Warehouses`, `Carrier_SLA_Policies`).
+
+**3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**
+
+* **Anti-Fan-Out Integration (Silver):** Collapse 22,746 WMS milestone events to 1 row per `order_id` *before* prorating freight & SLA penalties across order lines so net revenue (`€29.95M`) and net profit (`€8.50M`) never double-count.
+* **Dimensional Modeling (Gold):** Build `Fact_Order_Lines` + `Fact_Shipments` linked to `Dim_Product`, `Dim_Customer`, `Dim_Warehouse`, `Dim_Carrier`, and `Dim_Date`.
+* **Synthetic Metrics (KPIs):** True **OTIF (%)** (`On-Time AND In-Full`), Warehouse Dwell Time (h), Prorated Net Profit (`€` / `%`), and SLA Penalty Leakage.
+
+**4\. Dual Storytelling Perspectives (Track A vs Track B):**
+
+* **Group A Focus – VP of Supply Chain & Logistics:** Warehouse dwell bottlenecks (e.g., `HUB-South-Katowice` Urgent mode & `RABEN_LOGISTICS`), carrier SLA adherence, and late-delivery recovery.
+* **Group B Focus – Commercial & FP&A Director:** Margin erosion waterfall (`Discount + Freight + SLA Penalties`), proving why `VIP Heavy OEM` (`VIP Hoses`) generates negative net margin despite high gross revenue.
+
+## **CASE STUDY 3: People Analytics Conforme RODO, Burnout i Koszty Zmian (Nexis Workforce)**
+
+*(Industrial Workforce Planning, Bradford Burnout & Compliance Analytics)*
+
+### **ONE-PAGER 3 (Gotowy materiał dla studentów — 60-Day Simulation)**
+
+**CASE STUDY \#3: Nexis Precision Automotive Components Sp. z o.o. — Workforce Analytics & Operations**
+
+**1\. Business Context** Located in Wrocław, Nexis runs four electromechanical actuator assembly lines (`LINE_01..LINE_04`) across three continuous shifts (`S1/S2/S3`) staffed by 165 operators (115 Permanent + 50 Temporary Agency). Over 60 days, labor cost (€961k with 1.5x overtime premiums) and scrap losses (€934k) threaten margins, while management relies on flawed averages blaming night shifts (`S3`) without noticing RODO privacy exposure in raw HR spreadsheets.
 
 **2\. Source Data Architecture (Your Data Pack)**
 
-* **sensor\_telemetry.csv (SCADA System):** High-frequency logs containing machine ID, timestamp, air & process temperature, rotational speed (RPM), torque (Nm), tool wear (min), and defective units produced. *(Warning: Contains sensor glitches, extreme numerical outliers, and missing timestamps).*
+* **`shift_production_performance.csv` (MES System):** 720 line-shift rows across 60 days (`LINE_01..LINE_04 × S1..S3`) capturing output targets, produced/good/scrap units, rework, and scrap EUR waste.
+* **`workforce_events.json` (Badge Telemetry, QA Audits & Absences):** ~25,585 events recording shift clock-ins/outs, optical QA defects, overtime approvals, and sick leaves (plus sensitive `details_medical_note` that MUST be purged!). Injects duplicate gate scans (`<60s`), `145h`/`-3.5h` glitches, ghost IDs, and `S3` cross-midnight scans.
+* **`workforce_roster_and_skills.xlsx` (HR Master Registry):** 4 tabs (`Employees` containing RODO PII fields to purge pre-Silver, `Skill_Matrix`, `Incentive_Policies` €250/mo bonus `<=1.80%` scrap, and `Shift_Staffing_Plan`).
 
-* **maintenance\_logs.json (CMMS System):** Records of planned and unplanned downtimes, failure mode codes (Tool Wear Failure, Heat Dissipation Failure, Power Failure, Overstrain), and repair duration.
+**3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**
 
-* **machines\_and\_shifts.xlsx (ERP Master Data):** Dictionary of production lines, machine models, nominal cycle times, hourly operating costs, and shift supervisor assignments.
+* **Mandatory RODO Purge (`DQ-C3-RODO`):** Physically drop `first_name`, `last_name`, `corporate_email`, `national_id_masked`, and `details_medical_note` prior to Silver/Gold export (`0` PII columns verified!).
+* **Time & Causal Math:** Align midnight `S3` events deterministically (`S1:-2h, S2:-3h, S3:-9h`), enforce causal `[d-7, d-1]` prior overtime windows (`prior_7d_ot_hours`), cluster contiguous sick spells for the **Bradford Factor ($B = S^2 \times D$)**, and apply true **`1.5x` OT** wage multipliers.
+* **Dimensional Modeling (Gold):** Build clean Star Schema (`Fact_Shift_Production`, `Fact_Daily_Staffing_Attendance`, `Fact_Absence_Events`) linked to `Dim_Date`, `Dim_Shift`, `Dim_Assembly_Line`, and pseudonymized `Dim_Employee`.
 
-**3\. Engineering & Analytical Challenges (Weeks 2–7)**
+**4\. Dual Storytelling Perspectives:**
 
-* **Integration (ELT \- Bronze):** Synchronize high-frequency telemetry with shift schedules and downtime events using time-window joins.
-
-* **Data Quality & Numerical Methods (Silver):** Apply statistical outlier detection ($3\sigma$ or IQR method) to filter out corrupted torque/temperature sensor spikes. Impute missing ambient temperature readings using linear interpolation.
-
-* **Dimensional Modeling (Gold):** Design a Star Schema centered around a Fact\_Production\_Runs table, linked to Dim\_Machine, Dim\_Time\_Shift, Dim\_Failure\_Type, and Dim\_Operator.
-
-* **Synthetic Metrics (KPIs):** Calculate **OEE (Overall Equipment Effectiveness \= Availability × Performance × Quality)**, **MTBF** (Mean Time Between Failures), **MTTR** (Mean Time To Repair), and **Scrap Rate (%)**.
-
-**4\. Dual Storytelling Perspectives (If two groups select this case):**
-
-* **Group A Focus – Chief Operations Officer (COO) Perspective:** Focus on capacity utilization, shift-to-shift comparisons, OEE maximization, and meeting production targets across different product types (L/M/H quality variants).
-
-* **Group B Focus – Head of Maintenance & Reliability Perspective:** Focus on equipment degradation, Pareto analysis of failure modes, tool wear thresholds, thermal stress anomalies, and minimizing MTTR.
-
-## **CASE STUDY 2: Globalny Łańcuch Dostaw, Logistyka Produkcyjna i OTIF**
-
-*(Supply Chain Resilience, Inventory & Order Fulfillment BI)*
-
-### **Skąd wziąć dane (Realny zbiór Open Source):**
-
-* **Zbiór bazowy (Kaggle):** **DataCo Smart Supply Chain for Big Data Analysis** (ok. 180 000 wierszy, ponad 50 kolumn\!).
-
-* Jest to jeden z najlepszych publicznych zbiorów danych do nauki modelowania hurtowni danych. W oryginale jest to wielka, zdenormalizowana tabela płaska zawierająca wszystko: dane o zamówieniach, produktach, kategoriach, magazynach, czasach wysyłki (planowanych vs. rzeczywistych), rabatach, marżach i lokalizacjach geograficznych.
-
-* *Jak przygotować paczkę przed zajęciami:* Wystarczy podzielić ten zbiór w Pythonie na 3 logiczne pliki źródłowe: orders\_transactions.csv (transakcje), shipping\_logistics.csv (daty wysyłek, statusy dostaw, czasy transportu) oraz products\_customers\_catalog.xlsx (słowniki produktów, działów i klientów).
-
-### **ONE-PAGER 2 (Gotowy materiał dla studentów)**
-
-**CASE STUDY \#2: DataCo Industrial – Supply Chain & Order Fulfillment Intelligence**
-
-**1\. Business Context** DataCo is a global manufacturer and distributor of industrial and consumer goods. Despite growing order volumes, the company suffers from severe delivery delays, unpredictable freight costs, and imbalanced inventory allocations across regional distribution centers. The Executive Committee requires an analytical data mart and interactive dashboards to monitor delivery reliability and product line profitability.
-
-**2\. Source Data Architecture (Your Data Pack)**
-
-* **order\_items\_trans.csv (ERP Sales Module):** Order IDs, item quantities, unit prices, applied discounts, gross sales, and net profit margins per transaction line. *(Warning: Contains duplicate transaction logs, negative profit anomalies, and inconsistent currency/discount formats).*
-
-* **shipment\_tracking.csv (WMS / Logistics System):** Scheduled shipping days vs. actual shipping days, shipping mode (Standard, First Class, Second Class, Same Day), delivery status, and destination coordinates.
-
-* **master\_catalog.xlsx (MDM System):** Product hierarchy (Department $\rightarrow$ Category $\rightarrow$Product), warehouse locations, and customer segment dictionaries.
-
-**3\. Engineering & Analytical Challenges (Weeks 2–7)**
-
-* **Integration (ELT \- Bronze):** Reconstruct the end-to-end order lifecycle by joining sales transactions with WMS logistics logs and master dictionaries.
-
-* **Data Quality & Numerical Methods (Silver):** Standardize discount rates, remove duplicated ERP exports, and use numerical distribution analysis to detect extreme lead-time anomalies and pricing errors.
-
-* **Dimensional Modeling (Gold):** Normalize the flat staging data into a clean Kimball Star Schema (Fact\_Order\_Fulfillment connected to Dim\_Product, Dim\_Customer, Dim\_Geography, Dim\_Shipping\_Mode, and Dim\_Calendar).
-
-* **Synthetic Metrics (KPIs):** Implement **OTIF (On-Time In-Full %)**, **Schedule Variance (Lead Time Delta)**, **Late Delivery Risk Index**, and **Net Margin Erosion due to Discounts**.
-
-**4\. Dual Storytelling Perspectives (If two groups select this case):**
-
-* **Group A Focus – VP of Supply Chain & Logistics Perspective:** Focus on OTIF performance, shipping mode bottlenecks, lead-time variability across geographical regions, and warehouse dispatch efficiency.
-
-* **Group B Focus – Commercial & Production Planning Director Perspective:** Focus on product portfolio profitability, impact of discount policies on margins, ABC/XYZ product segmentation, and demand patterns across customer segments.
-
-## **CASE STUDY 3: Energochłonność Procesów Przemysłowych i Zrównoważona Produkcja**
-
-*(Industrial Energy Management, Power Quality & Carbon Footprint)*
-
-### **Skąd wziąć dane (Realny zbiór Open Source):**
-
-* **Zbiór bazowy (UCI Machine Learning Repository / Kaggle):** **Steel Industry Energy Consumption Dataset**(dane z huty stali DAEWOO Steel Co. Ltd w Korei Południowej).
-
-* Zawiera 35 040 rekordów zbieranych w interwałach **co 15 minut** przez cały rok: zużycie energii czynnej (kWh), energii biernej indukcyjnej i pojemnościowej (kVarh), współczynnik mocy (*Power Factor*), emisję $C{O}_{2}$($tC{O}_{2}$), status pracy linii (WeekStatus, Load\_Type: *Light\_Load, Medium\_Load, Maximum\_Load*).
-
-* *Jak wzbogacić paczkę:* Zbiór ma idealną strukturę szeregów czasowych (co 15 minut). Aby wymusić integrację wieloźródłową (Tydzień 2), wystarczy dodać drugi plik z dobowym wolumenem wyprodukowanych ton stali (daily\_steel\_output.csv) oraz tabelę taryf energetycznych (energy\_tariffs.json – różne stawki za prąd w szczycie i poza szczytem).
-
-### **ONE-PAGER 3 (Gotowy materiał dla studentów)**
-
-**CASE STUDY \#3: Nexis Precision Electronics – Industrial Workforce Planning, People Analytics & Operations**
-
-**1\. Business Context** High-tech contract electronics and medical sensor manufacturing relies critically on human motor dexterity, station certifications, and operator alertness. Nexis Precision Electronics operates 4 assembly lines across 3 daily shifts. Management faced surging scrap costs (+34%) and falling schedule adherence (79%), relying on intuitive fixes (cheap agency temps and heavy overtime). BI analysis reveals counter-intuitive traps: agency staffing >20% causes scrap to quadruple, while overtime >8h/week destroys employee eligibility for the €250 Quality Bonus, crashing morale and driving turnover.
-
-**2\. Source Data Architecture (Your Data Pack)**
-
-* **shift_production_performance.csv (MES System):** Shift-level records (168 batches across 4 lines over 14 days) capturing planned target units, actual produced units, scrap defect units, rework units, material scrap loss (€), and line stoppage minutes.
-
-* **workforce_events.json (Badge Telemetry & QA Audits):** Continuous event stream (6,300+ events) tracking clock-ins, station check-ins, optical QA audit defect counts, overtime approvals, and unplanned sick leave call-ins. *(Warning: Contains duplicate badge punches, 145-hour unclosed shift outliers, and Sunday/Monday burnout spikes).*
-
-* **workforce_roster_and_skills.xlsx (HR Master Registry):** Multi-sheet workbook (`Employees`, `Skill_Matrix`, `Incentive_Policies`, `Shift_Staffing_Plan`) defining contracts, hourly rates, agency partners, skill levels, and the formal €250 Monthly Quality Bonus threshold (scrap $\le 1.80\%$).
-
-**3\. Engineering & Analytical Challenges (Weeks 2–7)**
-
-* **Integration (ELT \- Bronze):** Solve the multi-source challenge – aggregate individual badge telemetry and station defect counts to calculate the shift-level Agency Staffing Ratio (%) and link it directly to shift scrap and throughput.
-
-* **Data Quality & Numerical Methods (Silver):** Deduplicate badge swipes, winsorize unclosed shift duration outliers (145h -> 8h), standardize messy contract casing (`temp_agency` vs `Temporary_Agency`), and compute individual monthly scrap rates.
-
-* **Dimensional Modeling (Gold):** Build a Star Schema (`Fact_Shift_Production` & `Fact_Daily_Staffing_Attendance`) linked to conformed dimensions: `Dim_Date`, `Dim_Shift`, `Dim_Assembly_Line`, `Dim_Employee`.
-
-* **Synthetic Metrics (KPIs):** Calculate **Schedule Attainment (%)**, **Shift Scrap Defect Rate (%)**, **True Quality-Adjusted Unit Labor Cost (€/good unit)**, **Quality Bonus Qualification Rate (%)**, and **Workforce Sizing Net ROI (€/year)**.
-
-**4\. Dual Storytelling Perspectives (If two groups select this case):**
-
-* **Group A Focus – Chief People Officer (CPO) / VP of Human Resources Perspective:** Focus on the Incentive Sabotage Paradox (overtime fatigue collapsing €250 Quality Bonus eligibility from 81.5% down to 14.8%), Monday burnout absenteeism, and building the Strategic Headcount Sizing Model proving that recruiting +18 permanent technicians saves €220k net annually.
-
-* **Group B Focus – Director of Plant Operations & Production Planning Perspective:** Focus on the Cheap Agency Staffing Trap (agency staffing >20% quadruples scrap and inflates unit cost from €19.80 to €29.40), enforcing agency quota caps (max 15-20%), and balancing station certifications to eliminate line stoppages.
+* **Group A Focus – HR Director:** Audit Permanent vs Agency churn & bonus exclusion fairness, prove how `prior_7d_ot >= 8h` drives sick absences (`Bradford B >= 400` critical tier), and enforce RODO / EU AI Act Annex III safeguards.
+* **Group B Focus – VP of Manufacturing Operations:** Uncover the true bottleneck across `Line × Shift` L2+ Certified Coverage (e.g., morning `LINE_03 S1` collapse vs `S3`), quantify `1.5x` OT payroll + fatigued scrap losses, and model **Dynamic Implied Missing Monthly FTEs** reacting live to date slicers.
 
 ### **Podsumowanie dydaktyczne – dlaczego te 3 zestawy sprawdzą się idealnie?**
 
-1. **Różnorodność problemów inżynierskich:** Masz tu 3 filary nowoczesnego przemysłu: **Utrzymanie Ruchu / OEE** (Case 1), **Łańcuch Dostaw / OTIF** (Case 2\) oraz **Zarządzanie Kapitałem Ludzkim i Operacjami / People Analytics** (Case 3).
-
-2. **Wymuszenie pełnego cyklu ELT:** Żaden z tych problemów nie da się rozwiązać na jednej płaskiej tabeli – w każdym studenci muszą połączyć heterogeniczne źródła (CSV, JSON, XLSX) o różnej ziarnistości (zdarzenia telemetryczne, dane zmianowe, rejestry stałe).
-
-3. **Wyraźna rola metod numerycznych (PEK W01.3):** W każdym zbiorze są dane ciągłe (temperatury, momenty obrotowe, czasy dostaw, pobór mocy w kWh), na których trzeba policzyć rozkłady, odsiać outliery metodami statystycznymi i policzyć złożone wskaźniki syntetyczne.
+1. **Różnorodność problemów inżynierskich:** Masz tu 3 filary nowoczesnego przemysłu: **Utrzymanie Ruchu / OEE** (Case 1), **Łańcuch Dostaw / OTIF i Marże Net** (Case 2) oraz **Kapitał Ludzki, Burnout i RODO / People Analytics** (Case 3).
+2. **Pełna parzystość 3 formatów (`CSV + JSON + XLSX`):** W każdym studium przypadku studenci integrują 3 heterogeniczne źródła na horyzoncie 60 dni z jawnymi regułami `Proces DQ Gate 1` oraz bramką kwarantanny.
+3. **Rygor matematyczny i anty-fan-out (PEK):** Wyeliminowanie złączeń iloczynowych (`480.0 min` w SmartPress, alokacja prorata frachtu w DataCo, przyczynowe okno `prior_7d_ot` i czynnik Bradforda w Nexis) gwarantuje rzetelną spójność od Bronze aż po kafelki dashboardu.

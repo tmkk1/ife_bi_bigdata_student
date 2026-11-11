@@ -88,15 +88,20 @@ def check_packages() -> bool:
 
 
 def check_and_generate_data(repo_root: Path) -> bool:
-    lab01_data = repo_root / "03_labs_student_starters" / "lab_01_bronze_ingestion" / "data"
+    lab02_data = (
+        repo_root
+        / "03_labs_student_starters"
+        / "lab_02_bronze_ingestion_and_profiling"
+        / "data"
+    )
     ref_dir = repo_root / "05_case_studies_reference_solutions"
 
     all_present = True
     for case_name, files in CASE_RAW_FILES.items():
-        # Check student repo path first, then reference path
+        # Check student Lab 02 path first, then instructor reference path
         candidate_dirs = [
-            lab01_data / case_name,
-            lab01_data / case_name / "bronze",
+            lab02_data / case_name,
+            lab02_data / case_name / "bronze",
             ref_dir / case_name / "data" / "bronze",
         ]
         active_dir = None
@@ -106,7 +111,7 @@ def check_and_generate_data(repo_root: Path) -> bool:
                 break
 
         if active_dir is None:
-            # Check if partial files exist or need generation in instructor repo
+            # Auto-generate only inside the instructor repository
             gen_script = repo_root / "02_data_generator" / "generate_all_packs.py"
             if gen_script.exists():
                 print(f"  [INFO] Generating raw Bronze files for {case_name}...")
@@ -142,8 +147,9 @@ def main() -> int:
         print("  SUCCESS! Your laptop is 100% ready for the BI & Big Data labs.")
         print("  Next step:")
         print("    1. Open this folder in VS Code.")
-        print("    2. Open: 03_labs_student_starters/lab_01_bronze_ingestion/lab_01_bronze_ingestion_and_exploration.ipynb")
-        print("    3. Select the '.venv' kernel in the top-right corner of the notebook.")
+        print("    2. Lab 01 Primer: 03_labs_student_starters/lab_01_python_and_tooling_primer/lab_01_python_and_tooling_primer_workbook.ipynb")
+        print("    3. Lab 02 Bronze: 03_labs_student_starters/lab_02_bronze_ingestion_and_profiling/lab_02_bronze_ingestion_and_exploration.ipynb")
+        print("    4. Select the '.venv' kernel in the top-right corner of each notebook.")
         print("=" * 68 + "\n")
         return 0
     else:

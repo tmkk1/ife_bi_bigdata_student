@@ -137,16 +137,16 @@ python verify_environment.py
 
 ---
 
-## 📓 Step 5: Launching Lab 01 in VS Code
+## 📓 Step 5: Launching Lab 01 & Lab 02 in VS Code
 
-1. In the VS Code Explorer sidebar (left), navigate to:
-   `03_labs_student_starters/lab_01_bronze_ingestion/`
-2. Open:
-   * **`lab_01_python_and_tooling_primer_workbook.ipynb`** (10-minute Python warm-up)
-   * **`lab_01_bronze_ingestion_and_exploration.ipynb`** (Main Lab 01 Bronze Ingestion notebook)
-3. **Select the Kernel (Top-Right Corner of the Notebook):**
-   * Click **"Select Kernel"** (top-right) ➔ **"Python Environments..."** ➔ select **`.venv (Python 3.1x)`** or **`Python (.venv - BI & Big Data)`**.
-4. Press **`Shift + Enter`** on the first code cell to verify that `Raw Bronze Directory exists: True` is printed!
+1. In the VS Code Explorer sidebar (left), start with **Lab 01** (`03_labs_student_starters/lab_01_python_and_tooling_primer/`):
+   * **`lab_01_Python_and_Tooling_Primer.md`** (or `_fr.md`) — Reference guide
+   * **`lab_01_python_and_tooling_primer_workbook.ipynb`** (or `_fr.ipynb`) — 3-hour Python & Tooling warm-up
+2. Next session (**Lab 02 — Bronze Ingestion & Profiling**), open `03_labs_student_starters/lab_02_bronze_ingestion_and_profiling/`:
+   * **`lab_02_bronze_ingestion_and_exploration.ipynb`** (or `_fr.ipynb`) — Multi-format (`CSV + JSON + XLSX`) ingestion using the datasets staged inside `lab_02_bronze_ingestion_and_profiling/data/`.
+3. **Select the Kernel (Top-Right Corner of Every Notebook):**
+   * Click **"Select Kernel"** (top-right) ➔ **"Python Environments..."** ➔ select **`.venv (Python 3.1x)`**.
+4. In Lab 02, press **`Shift + Enter`** on the first code cell to verify `BRONZE_RAW.exists() == True`!
 
 ---
 

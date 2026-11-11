@@ -36,11 +36,9 @@ function Write-Err([string]$Message) {
 }
 
 function Refresh-SessionPath {
-    $machinePath = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
-    $userPath    = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
-    
-    $combined = @($userPath, $machinePath) | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
-    $env:Path = $combined -join ";"
+    $machinePath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+    $userPath = [System.Environment]::GetEnvironmentVariable("Path", "User")
+    $env:Path = "$userPath;$machinePath"
 }
 
 Write-Step "STEP 1: Evaluating Local Windows Environment"
@@ -206,18 +204,8 @@ if ($codeCmd) {
 # ---------------------------------------------------------------------------
 Write-Step "STEP 4: Setting Up Course Directory Structure & Files"
 
-# Safely resolve script folder if running from a saved file on disk
-$scriptDir = if ($PSScriptRoot) {
-    $PSScriptRoot
-} elseif ($MyInvocation.MyCommand.Path) {
-    Split-Path -Parent $MyInvocation.MyCommand.Path
-} else {
-    $null
-}
-
-if ($scriptDir -and 
-    (Test-Path (Join-Path $scriptDir "requirements.txt")) -and 
-    (Test-Path (Join-Path $scriptDir "03_labs_student_starters"))) {
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-Path $scriptDir "03_labs_student_starters"))) {
     $repoRoot = $scriptDir
     Write-Ok "Already running inside course repository: $repoRoot"
     if ((Test-Path (Join-Path $repoRoot ".git")) -and (Get-Command git -ErrorAction SilentlyContinue)) {

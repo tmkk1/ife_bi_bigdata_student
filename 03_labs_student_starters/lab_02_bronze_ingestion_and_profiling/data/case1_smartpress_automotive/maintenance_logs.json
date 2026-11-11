@@ -1,0 +1,2290 @@
+[
+  {
+    "ticket_id": "CMMS-20260001",
+    "event_date": "2026-10-01 22:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260002",
+    "event_date": "2026-10-01 22:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260003",
+    "event_date": "2026-10-02 02:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260004",
+    "event_date": "2026-10-02 04:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260005",
+    "event_date": "2026-10-02 11:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260006",
+    "event_date": "2026-10-02 15:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260007",
+    "event_date": "2026-10-02 21:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260008",
+    "event_date": "2026-10-03 02:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260009",
+    "event_date": "2026-10-03 05:45:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260010",
+    "event_date": "2026-10-03 09:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260011",
+    "event_date": "2026-10-03 18:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260012",
+    "event_date": "2026-10-03 23:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260013",
+    "event_date": "2026-10-04 02:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260014",
+    "event_date": "2026-10-04 08:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260015",
+    "event_date": "2026-10-04 17:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260016",
+    "event_date": "2026-10-04 17:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260017",
+    "event_date": "2026-10-04 23:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260018",
+    "event_date": "2026-10-05 00:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260019",
+    "event_date": "2026-10-05 14:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260020",
+    "event_date": "2026-10-05 16:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260021",
+    "event_date": "2026-10-05 18:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260022",
+    "event_date": "2026-10-05 20:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260023",
+    "event_date": "2026-10-06 10:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260024",
+    "event_date": "2026-10-06 12:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260025",
+    "event_date": "2026-10-06 13:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260026",
+    "event_date": "2026-10-06 21:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260027",
+    "event_date": "2026-10-07 05:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260028",
+    "event_date": "2026-10-07 05:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260029",
+    "event_date": "2026-10-07 11:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260030",
+    "event_date": "2026-10-07 13:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260031",
+    "event_date": "2026-10-08 02:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260032",
+    "event_date": "2026-10-08 03:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260033",
+    "event_date": "2026-10-08 04:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260034",
+    "event_date": "2026-10-08 07:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260035",
+    "event_date": "2026-10-08 13:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260036",
+    "event_date": "2026-10-08 13:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260037",
+    "event_date": "2026-10-08 18:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260038",
+    "event_date": "2026-10-08 20:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260039",
+    "event_date": "2026-10-09 05:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260040",
+    "event_date": "2026-10-09 10:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260041",
+    "event_date": "2026-10-09 17:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260042",
+    "event_date": "2026-10-09 20:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260043",
+    "event_date": "2026-10-09 21:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260044",
+    "event_date": "2026-10-10 07:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260045",
+    "event_date": "2026-10-10 08:00:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260046",
+    "event_date": "2026-10-10 15:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260047",
+    "event_date": "2026-10-10 17:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260048",
+    "event_date": "2026-10-11 00:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260049",
+    "event_date": "2026-10-11 01:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260050",
+    "event_date": "2026-10-11 13:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260051",
+    "event_date": "2026-10-11 14:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260052",
+    "event_date": "2026-10-11 23:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260053",
+    "event_date": "2026-10-12 00:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260054",
+    "event_date": "2026-10-12 11:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260055",
+    "event_date": "2026-10-12 12:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260056",
+    "event_date": "2026-10-12 15:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 30
+  },
+  {
+    "ticket_id": "CMMS-20260057",
+    "event_date": "2026-10-12 20:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260058",
+    "event_date": "2026-10-12 20:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260059",
+    "event_date": "2026-10-13 09:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260060",
+    "event_date": "2026-10-13 13:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260061",
+    "event_date": "2026-10-13 19:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260062",
+    "event_date": "2026-10-13 21:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260063",
+    "event_date": "2026-10-14 05:00:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260064",
+    "event_date": "2026-10-14 08:15:00",
+    "machine_code": "Press_01 ",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260065",
+    "event_date": "2026-10-14 18:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260066",
+    "event_date": "2026-10-14 21:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260067",
+    "event_date": "2026-10-15 02:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260068",
+    "event_date": "2026-10-15 04:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260069",
+    "event_date": "2026-10-15 04:30:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260070",
+    "event_date": "2026-10-15 23:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260071",
+    "event_date": "2026-10-16 00:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260072",
+    "event_date": "2026-10-16 04:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260073",
+    "event_date": "2026-10-16 05:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260074",
+    "event_date": "2026-10-16 22:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260075",
+    "event_date": "2026-10-16 23:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260076",
+    "event_date": "2026-10-17 00:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260077",
+    "event_date": "2026-10-17 02:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260078",
+    "event_date": "2026-10-17 13:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 30
+  },
+  {
+    "ticket_id": "CMMS-20260079",
+    "event_date": "2026-10-17 16:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260080",
+    "event_date": "2026-10-17 20:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260081",
+    "event_date": "2026-10-17 21:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260082",
+    "event_date": "2026-10-18 01:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260083",
+    "event_date": "2026-10-18 10:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260084",
+    "event_date": "2026-10-18 18:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260085",
+    "event_date": "2026-10-18 22:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260086",
+    "event_date": "2026-10-18 22:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260087",
+    "event_date": "2026-10-19 06:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260088",
+    "event_date": "2026-10-19 14:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260089",
+    "event_date": "2026-10-19 18:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260090",
+    "event_date": "2026-10-19 19:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260091",
+    "event_date": "2026-10-20 01:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260092",
+    "event_date": "2026-10-20 06:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260093",
+    "event_date": "2026-10-20 12:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260094",
+    "event_date": "2026-10-20 19:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260095",
+    "event_date": "2026-10-20 23:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260096",
+    "event_date": "2026-10-21 02:30:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260097",
+    "event_date": "2026-10-21 03:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260098",
+    "event_date": "2026-10-21 15:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260099",
+    "event_date": "2026-10-21 18:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260100",
+    "event_date": "2026-10-21 22:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260101",
+    "event_date": "2026-10-21 22:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260102",
+    "event_date": "2026-10-22 07:00:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260103",
+    "event_date": "2026-10-22 17:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260104",
+    "event_date": "2026-10-22 18:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260105",
+    "event_date": "2026-10-23 00:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260106",
+    "event_date": "2026-10-23 04:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260107",
+    "event_date": "2026-10-23 18:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260108",
+    "event_date": "2026-10-23 18:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260109",
+    "event_date": "2026-10-23 22:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260110",
+    "event_date": "2026-10-24 04:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260111",
+    "event_date": "2026-10-24 15:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260112",
+    "event_date": "2026-10-24 19:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260113",
+    "event_date": "2026-10-24 19:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260114",
+    "event_date": "2026-10-24 20:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260115",
+    "event_date": "2026-10-25 10:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260116",
+    "event_date": "2026-10-25 19:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260117",
+    "event_date": "2026-10-25 19:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260118",
+    "event_date": "2026-10-25 20:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260119",
+    "event_date": "2026-10-26 10:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260120",
+    "event_date": "2026-10-26 11:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260121",
+    "event_date": "2026-10-26 15:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260122",
+    "event_date": "2026-10-26 21:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260123",
+    "event_date": "2026-10-27 03:30:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260124",
+    "event_date": "2026-10-27 09:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260125",
+    "event_date": "2026-10-27 16:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260126",
+    "event_date": "2026-10-27 23:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260127",
+    "event_date": "2026-10-28 02:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260128",
+    "event_date": "2026-10-28 09:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260129",
+    "event_date": "2026-10-28 11:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260130",
+    "event_date": "2026-10-28 21:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260131",
+    "event_date": "2026-10-28 23:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260132",
+    "event_date": "2026-10-29 03:00:00",
+    "machine_code": "Press_01 ",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260133",
+    "event_date": "2026-10-29 06:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260134",
+    "event_date": "2026-10-29 16:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260135",
+    "event_date": "2026-10-29 19:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260136",
+    "event_date": "2026-10-29 21:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260137",
+    "event_date": "2026-10-30 01:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260138",
+    "event_date": "2026-10-30 12:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260139",
+    "event_date": "2026-10-30 14:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260140",
+    "event_date": "2026-10-30 15:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260141",
+    "event_date": "2026-10-31 01:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260142",
+    "event_date": "2026-10-31 02:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260143",
+    "event_date": "2026-10-31 14:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260144",
+    "event_date": "2026-10-31 17:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260145",
+    "event_date": "2026-10-31 18:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260146",
+    "event_date": "2026-10-31 22:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260147",
+    "event_date": "2026-11-01 10:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260148",
+    "event_date": "2026-11-01 14:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260149",
+    "event_date": "2026-11-01 15:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260150",
+    "event_date": "2026-11-01 15:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260151",
+    "event_date": "2026-11-02 07:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260152",
+    "event_date": "2026-11-02 08:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260153",
+    "event_date": "2026-11-02 10:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260154",
+    "event_date": "2026-11-02 19:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260155",
+    "event_date": "2026-11-02 21:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260156",
+    "event_date": "2026-11-02 23:00:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 30
+  },
+  {
+    "ticket_id": "CMMS-20260157",
+    "event_date": "2026-11-03 03:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260158",
+    "event_date": "2026-11-03 04:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260159",
+    "event_date": "2026-11-03 11:00:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260160",
+    "event_date": "2026-11-03 20:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260161",
+    "event_date": "2026-11-04 00:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260162",
+    "event_date": "2026-11-04 02:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260163",
+    "event_date": "2026-11-04 02:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260164",
+    "event_date": "2026-11-04 13:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260165",
+    "event_date": "2026-11-04 20:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260166",
+    "event_date": "2026-11-04 22:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260167",
+    "event_date": "2026-11-05 03:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260168",
+    "event_date": "2026-11-05 11:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260169",
+    "event_date": "2026-11-05 16:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260170",
+    "event_date": "2026-11-05 18:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260171",
+    "event_date": "2026-11-06 06:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260172",
+    "event_date": "2026-11-06 06:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260173",
+    "event_date": "2026-11-06 08:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260174",
+    "event_date": "2026-11-06 19:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260175",
+    "event_date": "2026-11-07 00:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260176",
+    "event_date": "2026-11-07 01:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260177",
+    "event_date": "2026-11-07 04:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260178",
+    "event_date": "2026-11-07 13:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260179",
+    "event_date": "2026-11-07 22:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260180",
+    "event_date": "2026-11-08 01:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260181",
+    "event_date": "2026-11-08 03:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260182",
+    "event_date": "2026-11-08 07:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260183",
+    "event_date": "2026-11-08 20:45:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260184",
+    "event_date": "2026-11-08 22:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260185",
+    "event_date": "2026-11-09 00:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260186",
+    "event_date": "2026-11-09 04:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260187",
+    "event_date": "2026-11-09 18:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260188",
+    "event_date": "2026-11-09 19:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260189",
+    "event_date": "2026-11-09 22:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260190",
+    "event_date": "2026-11-10 00:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260191",
+    "event_date": "2026-11-10 15:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260192",
+    "event_date": "2026-11-10 16:45:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260193",
+    "event_date": "2026-11-10 19:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260194",
+    "event_date": "2026-11-10 23:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260195",
+    "event_date": "2026-11-11 11:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260196",
+    "event_date": "2026-11-11 12:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260197",
+    "event_date": "2026-11-11 15:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260198",
+    "event_date": "2026-11-11 19:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260199",
+    "event_date": "2026-11-11 22:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260200",
+    "event_date": "2026-11-12 05:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260201",
+    "event_date": "2026-11-12 11:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260202",
+    "event_date": "2026-11-12 19:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260203",
+    "event_date": "2026-11-13 02:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260204",
+    "event_date": "2026-11-13 03:45:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260205",
+    "event_date": "2026-11-13 13:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260206",
+    "event_date": "2026-11-13 18:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260207",
+    "event_date": "2026-11-13 23:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260208",
+    "event_date": "2026-11-14 03:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260209",
+    "event_date": "2026-11-14 10:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260210",
+    "event_date": "2026-11-14 18:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260211",
+    "event_date": "2026-11-14 21:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260212",
+    "event_date": "2026-11-15 00:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260213",
+    "event_date": "2026-11-15 05:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260214",
+    "event_date": "2026-11-15 12:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260215",
+    "event_date": "2026-11-15 15:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260216",
+    "event_date": "2026-11-15 17:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260217",
+    "event_date": "2026-11-15 20:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260218",
+    "event_date": "2026-11-16 00:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260219",
+    "event_date": "2026-11-16 08:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260220",
+    "event_date": "2026-11-16 13:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260221",
+    "event_date": "2026-11-16 21:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260222",
+    "event_date": "2026-11-16 23:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260223",
+    "event_date": "2026-11-17 02:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260224",
+    "event_date": "2026-11-17 12:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260225",
+    "event_date": "2026-11-17 14:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260226",
+    "event_date": "2026-11-17 17:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260227",
+    "event_date": "2026-11-18 02:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260228",
+    "event_date": "2026-11-18 09:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260229",
+    "event_date": "2026-11-18 10:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260230",
+    "event_date": "2026-11-18 12:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260231",
+    "event_date": "2026-11-18 19:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260232",
+    "event_date": "2026-11-19 00:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260233",
+    "event_date": "2026-11-19 03:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260234",
+    "event_date": "2026-11-19 09:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260235",
+    "event_date": "2026-11-19 13:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260236",
+    "event_date": "2026-11-19 20:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260237",
+    "event_date": "2026-11-19 21:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260238",
+    "event_date": "2026-11-20 06:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260239",
+    "event_date": "2026-11-20 12:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260240",
+    "event_date": "2026-11-20 15:30:00",
+    "machine_code": "P-02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260241",
+    "event_date": "2026-11-20 16:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260242",
+    "event_date": "2026-11-21 06:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260243",
+    "event_date": "2026-11-21 10:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260244",
+    "event_date": "2026-11-21 11:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260245",
+    "event_date": "2026-11-21 15:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260246",
+    "event_date": "2026-11-22 05:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260247",
+    "event_date": "2026-11-22 06:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260248",
+    "event_date": "2026-11-22 10:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260249",
+    "event_date": "2026-11-22 11:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260250",
+    "event_date": "2026-11-23 00:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260251",
+    "event_date": "2026-11-23 05:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260252",
+    "event_date": "2026-11-23 06:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260253",
+    "event_date": "2026-11-23 08:00:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260254",
+    "event_date": "2026-11-23 23:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260255",
+    "event_date": "2026-11-23 23:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260256",
+    "event_date": "2026-11-24 00:30:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260257",
+    "event_date": "2026-11-24 07:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260258",
+    "event_date": "2026-11-24 17:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260259",
+    "event_date": "2026-11-24 18:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260260",
+    "event_date": "2026-11-24 22:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260261",
+    "event_date": "2026-11-25 10:15:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260262",
+    "event_date": "2026-11-25 11:15:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260263",
+    "event_date": "2026-11-25 13:15:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260264",
+    "event_date": "2026-11-25 17:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260265",
+    "event_date": "2026-11-26 04:45:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260266",
+    "event_date": "2026-11-26 08:45:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260267",
+    "event_date": "2026-11-26 13:30:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260268",
+    "event_date": "2026-11-26 14:45:00",
+    "machine_code": "Press_01 ",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260269",
+    "event_date": "2026-11-27 04:15:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260270",
+    "event_date": "2026-11-27 04:30:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260271",
+    "event_date": "2026-11-27 13:00:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260272",
+    "event_date": "2026-11-27 14:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Sensor Calibration Drift",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260273",
+    "event_date": "2026-11-28 01:00:00",
+    "machine_code": "P-02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260274",
+    "event_date": "2026-11-28 03:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260275",
+    "event_date": "2026-11-28 04:15:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260276",
+    "event_date": "2026-11-28 12:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260277",
+    "event_date": "2026-11-28 15:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Electrical Glitch",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260278",
+    "event_date": "2026-11-28 19:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 120
+  },
+  {
+    "ticket_id": "CMMS-20260279",
+    "event_date": "2026-11-28 22:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260280",
+    "event_date": "2026-11-29 11:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260281",
+    "event_date": "2026-11-29 12:00:00",
+    "machine_code": "PRESS_03",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Hydraulic Pressure Loss",
+    "repair_duration_min": 180
+  },
+  {
+    "ticket_id": "CMMS-20260282",
+    "event_date": "2026-11-29 17:45:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20260283",
+    "event_date": "2026-11-29 17:45:00",
+    "machine_code": "PRESS_04",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 90
+  },
+  {
+    "ticket_id": "CMMS-20260001",
+    "event_date": "2026-10-01 22:00:00",
+    "machine_code": "PRESS_02",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Stamping Die Misalignment",
+    "repair_duration_min": 60
+  },
+  {
+    "ticket_id": "CMMS-20260002",
+    "event_date": "2026-10-01 22:30:00",
+    "machine_code": "PRESS_01",
+    "downtime_type": "Preventive",
+    "failure_mode": "Tooling Replacement",
+    "repair_duration_min": 45
+  },
+  {
+    "ticket_id": "CMMS-20269999",
+    "event_date": "2099-01-01 03:00:00",
+    "machine_code": "PRESS_99",
+    "downtime_type": "Unplanned",
+    "failure_mode": "Phantom Ticket",
+    "repair_duration_min": 60
+  }
+]
