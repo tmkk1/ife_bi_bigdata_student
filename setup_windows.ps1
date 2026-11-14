@@ -263,6 +263,7 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
         if (Test-Path $extractDir) { Remove-Item $extractDir -Recurse -Force }
         Expand-Archive -Path $zipFile -DestinationPath $extractDir -Force
         $innerFolder = Get-ChildItem -Path $extractDir -Directory | Select-Object -First 1
+        if (-not $innerFolder) { throw "Failed to locate extracted repository folder in $extractDir." }
         if (-not (Test-Path $repoRoot)) { New-Item -ItemType Directory -Path $repoRoot | Out-Null }
         Copy-Item -Path "$($innerFolder.FullName)\*" -Destination $repoRoot -Recurse -Force
     }
@@ -280,7 +281,7 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
             if ($pqs) {
                 Write-Info "Copying previous Parquet sandbox_outputs from $candSb..."
                 foreach ($pq in $pqs) {
-                    $relPath = $pq.FullName.Substring($candSb.Length).TrimStart('\', '/')
+                    $relPath = $pq.FullName.Substring($candSb.Length).TrimStart([char[]]@('\', '/'))
                     $destFile = Join-Path $newSandbox $relPath
                     $destDir = Split-Path -Parent $destFile
                     if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null }
