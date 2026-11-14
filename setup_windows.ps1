@@ -12,8 +12,12 @@
 
 param(
     [string]$RepoUrl = "https://github.com/tmkk1/ife_bi_bigdata_student.git",
-    [string]$TargetDirName = "ife_bi_bigdata_student"
+    [string]$TargetDirName = ""
 )
+
+if (-not $TargetDirName) {
+    $TargetDirName = "ife_bi_bigdata_student_$(Get-Date -Format 'yyyy-MM-dd')"
+}
 
 $ErrorActionPreference = "Stop"
 
@@ -227,7 +231,14 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
     if (-not $parentDir -or -not (Test-Path $parentDir)) {
         $parentDir = $HOME
     }
-    $repoRoot = Join-Path $parentDir $TargetDirName
+    $baseRepoRoot = Join-Path $parentDir $TargetDirName
+    $repoRoot = $baseRepoRoot
+    if (Test-Path $repoRoot) {
+        $ver = 2
+        while (Test-Path "${baseRepoRoot}_v${ver}") { $ver++ }
+        $repoRoot = "${baseRepoRoot}_v${ver}"
+        Write-Info "Existing folder found at $baseRepoRoot; creating fresh session folder: $repoRoot"
+    }
 
     # Ensure Git is available or fall back to ZIP download
     $hasGit = $null -ne (Get-Command git -ErrorAction SilentlyContinue)
@@ -240,12 +251,7 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
         } catch {}
     }
 
-    if (Test-Path (Join-Path $repoRoot ".git")) {
-        Write-Info "Repository already exists at $repoRoot. Pulling latest changes..."
-        Push-Location $repoRoot
-        try { git pull --ff-only } catch {}
-        Pop-Location
-    } elseif ($hasGit) {
+    if ($hasGit) {
         Write-Info "Cloning student repository from $RepoUrl into $repoRoot..."
         git clone $RepoUrl $repoRoot
     } else {
@@ -260,6 +266,32 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
         if (-not (Test-Path $repoRoot)) { New-Item -ItemType Directory -Path $repoRoot | Out-Null }
         Copy-Item -Path "$($innerFolder.FullName)\*" -Destination $repoRoot -Recurse -Force
     }
+
+    # Carry forward upstream Parquet outputs from the most recent previous lab folder (if any)
+    $newSandbox = Join-Path $repoRoot "03_labs_student_starters\sandbox_outputs"
+    $searchDirs = @($parentDir, (Join-Path $env:USERPROFILE "Documents")) | Where-Object { Test-Path $_ }
+    $prevFolders = $searchDirs | ForEach-Object {
+        Get-ChildItem -Path $_ -Directory -Filter "ife_bi_bigdata_student*" -ErrorAction SilentlyContinue
+    } | Where-Object { $_.FullName -ne $repoRoot } | Sort-Object LastWriteTime -Descending
+    foreach ($pf in $prevFolders) {
+        $candSb = Join-Path $pf.FullName "03_labs_student_starters\sandbox_outputs"
+        if (Test-Path $candSb) {
+            $pqs = Get-ChildItem -Path $candSb -Filter "*.parquet" -Recurse -File -ErrorAction SilentlyContinue
+            if ($pqs) {
+                Write-Info "Copying previous Parquet sandbox_outputs from $candSb..."
+                foreach ($pq in $pqs) {
+                    $relPath = $pq.FullName.Substring($candSb.Length).TrimStart('\', '/')
+                    $destFile = Join-Path $newSandbox $relPath
+                    $destDir = Split-Path -Parent $destFile
+                    if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null }
+                    Copy-Item -Path $pq.FullName -Destination $destFile -Force
+                }
+                Write-Ok "Carried forward previous sandbox_outputs/*.parquet into new session folder."
+                break
+            }
+        }
+    }
+
     Write-Ok "Course files ready at: $repoRoot"
 }
 

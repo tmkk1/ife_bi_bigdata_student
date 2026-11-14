@@ -14,7 +14,8 @@
 set -euo pipefail
 
 REPO_URL="${1:-https://github.com/tmkk1/ife_bi_bigdata_student.git}"
-TARGET_DIR_NAME="${2:-ife_bi_bigdata_student}"
+TODAY_STR="$(date +%Y-%m-%d)"
+TARGET_DIR_NAME="${2:-ife_bi_bigdata_student_${TODAY_STR}}"
 
 CYAN='\033[0;36m'
 GREEN='\033[0;32m'
@@ -209,7 +210,16 @@ if [ -f "${SCRIPT_DIR}/requirements.txt" ] && [ -d "${SCRIPT_DIR}/03_labs_studen
     fi
 else
     mkdir -p "${HOME}/Courses"
-    REPO_ROOT="${HOME}/Courses/${TARGET_DIR_NAME}"
+    BASE_REPO_ROOT="${HOME}/Courses/${TARGET_DIR_NAME}"
+    REPO_ROOT="${BASE_REPO_ROOT}"
+    if [ -e "${REPO_ROOT}" ]; then
+        _ver=2
+        while [ -e "${BASE_REPO_ROOT}_v${_ver}" ]; do
+            _ver=$((_ver + 1))
+        done
+        REPO_ROOT="${BASE_REPO_ROOT}_v${_ver}"
+        info "Existing folder found at ${BASE_REPO_ROOT}; creating fresh session folder: ${REPO_ROOT}"
+    fi
 
     # Determine if real Git is available without triggering Xcode CLT popup
     REAL_GIT=""
@@ -222,13 +232,8 @@ else
     fi
 
     if [ -n "$REAL_GIT" ]; then
-        if [ -d "${REPO_ROOT}/.git" ]; then
-            info "Repository already exists at ${REPO_ROOT}. Pulling latest changes..."
-            (cd "$REPO_ROOT" && "$REAL_GIT" pull --ff-only) || true
-        else
-            info "Cloning student repository from ${REPO_URL} into ${REPO_ROOT}..."
-            "$REAL_GIT" clone "$REPO_URL" "$REPO_ROOT"
-        fi
+        info "Cloning student repository from ${REPO_URL} into ${REPO_ROOT}..."
+        "$REAL_GIT" clone "$REPO_URL" "$REPO_ROOT"
     else
         info "Git/Xcode CLT not installed; downloading repository ZIP directly via curl..."
         ZIP_URL="${REPO_URL%.git}/archive/refs/heads/main.zip"
@@ -243,6 +248,29 @@ else
         cp -R "${INNER_DIR}/." "$REPO_ROOT/"
         rm -rf "$TMP_ZIP" "$TMP_EXTRACT"
     fi
+
+    # Carry forward upstream Parquet outputs from the most recent previous lab folder (if any)
+    _new_sandbox="${REPO_ROOT}/03_labs_student_starters/sandbox_outputs"
+    _prev_sandbox=""
+    while IFS= read -r _cand_dir; do
+        [ -z "$_cand_dir" ] && continue
+        [ "$_cand_dir" = "$REPO_ROOT" ] && continue
+        _cand_sb="${_cand_dir}/03_labs_student_starters/sandbox_outputs"
+        if [ -d "$_cand_sb" ] && [ -n "$(find "$_cand_sb" -name '*.parquet' -print -quit 2>/dev/null)" ]; then
+            _prev_sandbox="$_cand_sb"
+            break
+        fi
+    done < <(ls -dt "${HOME}/Courses/ife_bi_bigdata_student"* "${HOME}/Documents/ife_bi_bigdata_student"* 2>/dev/null || true)
+
+    if [ -n "$_prev_sandbox" ]; then
+        info "Copying previous Parquet sandbox_outputs from ${_prev_sandbox}..."
+        (cd "$_prev_sandbox" && find . -name '*.parquet' -print0 | while IFS= read -r -d '' _pq; do
+            mkdir -p "${_new_sandbox}/$(dirname "$_pq")"
+            cp "$_pq" "${_new_sandbox}/${_pq}"
+        done)
+        ok "Carried forward previous sandbox_outputs/*.parquet into new session folder."
+    fi
+
     ok "Course files ready at: ${REPO_ROOT}"
 fi
 

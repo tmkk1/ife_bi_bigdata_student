@@ -11,9 +11,11 @@
 Instead of manually downloading files from MS Teams and configuring paths by hand, run our automated setup script. It will automatically:
 1. Check your operating system (Windows 10/11 or macOS Intel/Apple Silicon).
 2. Install **Python 3.12** and **Visual Studio Code** if you don't already have them.
-3. Download the official **Student Course Repository** into a standardized folder on your computer.
+3. Download the official **Student Course Repository** into a fresh dated folder (`~/Courses/ife_bi_bigdata_student_YYYY-MM-DD` on macOS/Linux or `%USERPROFILE%\Courses\ife_bi_bigdata_student_YYYY-MM-DD` on Windows), carrying forward any `sandbox_outputs/*.parquet` files from your previous lab session.
 4. Create an isolated **Virtual Environment (`.venv`)** and install all required libraries (`pandas`, `numpy`, `openpyxl`, `duckdb`, `pyarrow`, `plotly`, `jupyterlab`, `ipykernel`).
-5. Register the `.venv` Jupyter Kernel, configure VS Code extensions, and verify that all raw **Bronze case study datasets** are in place.
+5. Register the `.venv` Jupyter Kernel, configure VS Code extensions (`Python`, `Jupyter`, `Data Wrangler`), and verify that all raw **Bronze case study datasets** are in place.
+
+> **Updating Before Each Lab:** Simply re-run the **Method 1** one-line command below at the start of any lab session. It creates a new dated folder (`_YYYY-MM-DD`, or `_v2` if run twice the same day) and opens it in VS Code—so your earlier lab folders and edits remain completely intact if you ever want to revisit them!
 
 ---
 
@@ -118,6 +120,7 @@ All lab notebooks automatically locate raw datasets using the repository folder 
 3. Click the **Extensions** icon on the left sidebar (`Ctrl+Shift+X` on Windows / `Cmd+Shift+X` on macOS) and install:
    * **Python** (by Microsoft)
    * **Jupyter** (by Microsoft)
+   * **Data Wrangler** (by Microsoft)
 
 ---
 
