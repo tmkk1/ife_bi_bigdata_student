@@ -46,7 +46,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercont
 curl -fsSL https://raw.githubusercontent.com/tmkk1/ife_bi_bigdata_student/main/setup_macos.sh | bash
 ```
 
-*(Note: If your Mac does not have Python 3.10+ installed yet, the script will download the official Python 3.12 installer and ask for your Mac login password in the Terminal to install it).*
+*(Note: If your Mac does not have Python 3.11+ installed yet, the script will download the official Python 3.12 installer and ask for your Mac login password in the Terminal to install it).*
 
 #### Method 2: If You Downloaded / Cloned the Repository Already
 1. Open **Terminal** in the repository folder and run:
@@ -58,15 +58,37 @@ chmod +x setup_macos.sh
 
 ---
 
+### 🐧 For Linux (Ubuntu / Debian / Fedora / Arch / WSL2)
+
+#### Method 1: One-Line Terminal Bootstrap (Fastest)
+1. Open your **Terminal** and run:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/tmkk1/ife_bi_bigdata_student/main/setup_linux.sh | bash
+```
+
+*(Note: If Python 3.11+, `python3-venv`, `git`, or `curl` are missing, the script uses `apt`, `dnf`, `pacman`, or `zypper` to install them and creates `~/Courses/ife_bi_bigdata_student`).*
+
+#### Method 2: If You Downloaded / Cloned the Repository Already
+1. Open your terminal in the repository folder and run:
+
+```bash
+chmod +x setup_linux.sh
+./setup_linux.sh
+```
+
+---
+
 ## 🛠️ Option B: Step-by-Step Manual Setup (Fallback)
 
 If you prefer to set up your environment manually or if university Wi-Fi blocks automated installers, follow these exact steps:
 
 ### Step 1: Install Required Software
-1. **Python (3.10, 3.11, or 3.12):**
+1. **Python (3.11, 3.12, or 3.13 — 3.12 recommended):**
    * **Windows:** Download [Python 3.12 (64-bit Windows Installer)](https://www.python.org/ftp/python/3.12.7/python-3.12.7-amd64.exe).  
      ⚠️ **CRITICAL ON WINDOWS:** On the very first installer screen, check the box **"Add python.exe to PATH"** before clicking *Install Now*!
    * **macOS:** Download [Python 3.12 (macOS 11+ Universal2 Installer)](https://www.python.org/ftp/python/3.12.7/python-3.12.7-macos11.pkg) and double-click to install.
+   * **Linux (Ubuntu/Debian):** Install Python and the `venv` module via `sudo apt-get update && sudo apt-get install -y python3 python3-venv python3-pip git`.
 2. **Visual Studio Code:**
    * Download and install from [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
@@ -75,16 +97,18 @@ If you prefer to set up your environment manually or if university Wi-Fi blocks 
 ### Step 2: Get the Course Files (Standardized Folder Structure)
 All lab notebooks automatically locate raw datasets using the repository folder tree. **Never open a single `.ipynb` file directly from your `Downloads` folder or inside a `.zip` file!**
 
-* **If you have Git installed:** Open your terminal (`PowerShell` on Windows or `Terminal` on macOS) and run:
+> **Important Cloud Sync Warning:** Place the course folder in a local unsynced directory such as `~/Courses` (macOS/Linux) or `%USERPROFILE%\Courses` (Windows). Avoid **iCloud Documents** or **OneDrive-synced `Documents`** folders — cloud file offloading breaks `.venv` Python packages!
+
+* **If you have Git installed:** Open your terminal (`PowerShell` on Windows or `Terminal` on macOS/Linux) and run:
   ```bash
-  cd ~/Documents
+  mkdir -p ~/Courses && cd ~/Courses
   git clone https://github.com/tmkk1/ife_bi_bigdata_student.git
   cd ife_bi_bigdata_student
   ```
 * **If you do NOT have Git installed:**
   1. Go to [`https://github.com/tmkk1/ife_bi_bigdata_student`](https://github.com/tmkk1/ife_bi_bigdata_student).
   2. Click the green **`<> Code`** button ➔ **`Download ZIP`**.
-  3. Extract (Unzip) the entire folder into your `Documents` folder so you have `Documents/ife_bi_bigdata_student`.
+  3. Extract (Unzip) the entire folder into a local `Courses` folder so you have `Courses/ife_bi_bigdata_student`.
 
 ---
 
@@ -158,6 +182,8 @@ python verify_environment.py
 | **Windows:** `Activate.ps1 cannot be loaded because running scripts is disabled` | Windows default PowerShell ExecutionPolicy blocks scripts. | Run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in the terminal, then run `.\.venv\Scripts\Activate.ps1`. |
 | **macOS:** Popup asking to install *"command line developer tools"* when typing `python3` or `git` | macOS `/usr/bin/python3` is a stub when Xcode CLT is not installed. | Cancel the slow popup and run `./setup_macos.sh` — it installs official Python 3.12 from `python.org` (`/Library/Frameworks/...`) in 1 minute without needing Xcode! |
 | **macOS:** `SSL: CERTIFICATE_VERIFY_FAILED` when running `pip install` | Official `python.org` macOS installer needs its root certificates initialized. | Run: `sh "/Applications/Python 3.12/Install Certificates.command"` in Terminal. |
+| **Linux (Ubuntu/Debian):** `The virtual environment was not created successfully because ensurepip is not available` | Debian/Ubuntu splits the `venv` module out of base Python. | Run `sudo apt-get install -y python3-venv` (or run `./setup_linux.sh`), remove any half-created `.venv`, and retry. |
+| **macOS / Windows:** Imports inside `.venv` hang or fail with `ModuleNotFoundError` after closing the laptop | Project was placed inside iCloud `~/Documents` or OneDrive `Documents`, which offloaded files inside `.venv`. | Move the course folder to `~/Courses` (macOS) or `C:\Users\<you>\Courses` (Windows) and delete/recreate `.venv`. |
 | **VS Code:** Running a cell says *"Running cells with '.venv' requires the ipykernel package"* | `ipykernel` is missing or the wrong kernel is selected. | Activate `.venv` in terminal and run `pip install ipykernel`, then click the kernel name in the top-right of the notebook and pick `.venv`. |
 | **Notebook:** `Raw Bronze Directory exists: False` or `FileNotFoundError` | You opened a single downloaded `.ipynb` file outside the repo structure, or raw data wasn't generated. | Open the entire `ife_bi_bigdata_student` folder in VS Code (`File ➔ Open Folder...`) and run `python verify_environment.py`. |
 

@@ -11,17 +11,19 @@
 ## 1. Cadre Pédagogique, Organisation et Gouvernance du Cours
 
 ### 1.1 Charge de Travail et Rythme Hebdomadaire
-* **Crédits ECTS :** 5 ECTS (Volume global : 15h de Cours Magistraux, 30h de Travaux Pratiques / Laboratoires, 30h de Travaux Dirigés / Ateliers d'architecture).
+* **Crédits ECTS :** **6 ECTS** (Volume horaire en présentiel : **`60h` au total — `30h` de Laboratoires [10 × 3h] + `30h` de Travaux Dirigés / Ateliers [7 séances]** ; semestre d'hiver 2026/2027 `03.11.2026 – 27.01.2027`).
 * **Rythme Opérationnel :**
-  * **Cours Magistraux :** Fondements théoriques, principes de modélisation dimensionnelle, méthodologie de calcul des indicateurs de performance (KPI), règles de perception et de sémiologie graphique.
-  * **Laboratoires (3h Pratiques) :** Implémentation technique via Python et Pandas, requêtage analytique haute performance avec DuckDB et SQL, intégration d'outils décisionnels modernes et exploration des jeux de données réels.
-  * **Travaux Dirigés (3h en Équipes) :** Conception d'architecture de données, élaboration de schémas en étoile (*Star Schema*) de niveau production, formulation mathématique rigoureuse des métriques industrielles et maquettage (*wireframing*) de tableaux de bord exécutifs.
+  * **Cadre Théorique & Méthodologique :** Fondements théoriques, principes de modélisation dimensionnelle, méthodologie de calcul des indicateurs de performance (KPI), règles de perception et de sémiologie graphique intégrés aux séances.
+  * **Laboratoires (10 × 3h = 30h Pratiques, parcours EN & FR) :** Implémentation technique via Python, Pandas, DuckDB, SQL et Streamlit sur les jeux de données industriels de 60 jours.
+  * **Travaux Dirigés / Ateliers (7 Séances = 30h en Équipes) :** Conception d'architecture de données, élaboration de schémas en étoile (*Star Schema* `DBML`), formulation mathématique rigoureuse des métriques industrielles, maquettage (*wireframing*) et soutenance exécutive.
 
 ### 1.2 Modalités d'Évaluation et Règlements
-* **Seuil d'Admission :** Obtention obligatoire d'un minimum de $51\%$ à chacune des deux composantes d'évaluation :
-  * **Test de Connaissances Individuel (20%) :** Épreuve de 30 minutes portant sur les méthodes numériques, les paradigmes ELT, la modélisation dimensionnelle de Kimball, le calcul de métriques et les moteurs OLAP.
-  * **Projet d'Équipe et Soutenance Orale (80%) :** Livraison et défense en semaine 10 d'une solution décisionnelle de bout en bout (*end-to-end*) réalisée par équipes de 5 étudiants.
-* **Régime d'Assiduité :** Présence obligatoire aux Travaux Pratiques et Travaux Dirigés. Tolérance maximale d'une seule absence non justifiée par modalité. Un quorum d'au moins $50\%$ des membres de chaque équipe doit impérativement être réuni à chaque séance.
+* **Seuil d'Admission (`>= 50 %` requis) et Grille `30 / 30 / 25 / 15` :** Les notes d'équipe sont individualisées par la matrice confidentielle d'évaluation par les pairs (**CPAM**) et l'audit des commits Git, avec gel du code au **Lab 10 (`19.01.2027`)** et **Soutenance Finale devant le Comité de Direction (`Atelier #7`, mercredi `27.01.2027`)** :
+  * **30 %** — Ingénierie des données, DAMA DQ (`Proces DQ Gate 1`), Quarantaine & Conformité RODO
+  * **30 %** — Modèle dimensionnel Kimball (`DBML == DuckDB`), architecture anti-inflation (*anti-fan-out*) & rigueur mathématique des KPI
+  * **25 %** — Ergonomie du cockpit Dual-Track (`Onglet 1 / Onglet 2 / Onglet 3`), perceptibilité visuelle & interactivité dynamique
+  * **15 %** — Perspicacité métier (ROI €), faisabilité EU AI Act & Q&R de soutenance en direct (`17 min` : `12m` présentation/démo + `5m` questions & exercice de crise de `60s`)
+* **Régime d'Assiduité :** Présence obligatoire aux Travaux Pratiques et Travaux Dirigés (**assiduité minimale de `80 %`** et **tolérance maximale de `2` absences non justifiées** sur l'ensemble du semestre). Un quorum d'au moins $50\%$ des membres de chaque équipe doit impérativement être réuni à chaque séance.
 * **Charte relative à l'Intelligence Artificielle (Arrêté Rectoral n° 31/2025) :**
   * *Usages Autorisés :* Assistance à la syntaxe de programmation, débogage de code, optimisation algorithmique et séances de remue-méninges conceptuel.
   * *Usages Interdits :* Production non vérifiée de rapports écrits automatisés et soumission de modèles de données ou de tableaux de bord générés par IA sans validation analytique manuelle.

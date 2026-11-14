@@ -64,18 +64,18 @@ if ($hasWinget) {
 }
 
 # ---------------------------------------------------------------------------
-# STEP 2: Check / Install Python (3.10 - 3.12)
+# STEP 2: Check / Install Python (3.11+)
 # ---------------------------------------------------------------------------
-Write-Step "STEP 2: Checking Python Installation (Requires Python 3.10+)"
+Write-Step "STEP 2: Checking Python Installation (Requires Python 3.11+)"
 
 function Find-ValidPython {
     Refresh-SessionPath
 
-    # 1. Check py launcher for 3.12, 3.11, 3.13, 3.10
+    # 1. Check py launcher for 3.12, 3.11, 3.13
     if (Get-Command py -ErrorAction SilentlyContinue) {
-        foreach ($ver in @("-3.12", "-3.11", "-3.13", "-3.10", "-3")) {
+        foreach ($ver in @("-3.12", "-3.11", "-3.13", "-3")) {
             try {
-                $out = & py $ver -c "import sys; print(sys.executable if sys.version_info >= (3,10) else '')" 2>$null
+                $out = & py $ver -c "import sys; print(sys.executable if sys.version_info >= (3,11) else '')" 2>$null
                 if ($LASTEXITCODE -eq 0 -and $out -and (Test-Path $out.Trim())) {
                     return $out.Trim()
                 }
@@ -86,7 +86,7 @@ function Find-ValidPython {
     # 2. Check python command (ignoring Windows Store stub in WindowsApps)
     if (Get-Command python -ErrorAction SilentlyContinue) {
         try {
-            $out = & python -c "import sys; print(sys.executable if sys.version_info >= (3,10) else '')" 2>$null
+            $out = & python -c "import sys; print(sys.executable if sys.version_info >= (3,11) else '')" 2>$null
             if ($LASTEXITCODE -eq 0 -and $out -and ($out -notmatch "WindowsApps") -and (Test-Path $out.Trim())) {
                 return $out.Trim()
             }
@@ -115,7 +115,7 @@ function Find-ValidPython {
 $pythonExe = Find-ValidPython
 
 if (-not $pythonExe) {
-    Write-Info "Compatible Python (3.10+) not found. Installing Python 3.12..."
+    Write-Info "Compatible Python (3.11+) not found. Installing Python 3.12..."
     if ($hasWinget) {
         try {
             winget install -e --id Python.Python.3.12 --scope user --accept-package-agreements --accept-source-agreements
@@ -136,7 +136,7 @@ if (-not $pythonExe) {
 }
 
 if (-not $pythonExe) {
-    Write-Err "Python 3.10+ could not be installed automatically. Please install Python 3.12 from https://www.python.org/downloads/ (check 'Add python.exe to PATH') and re-run."
+    Write-Err "Python 3.11+ could not be installed automatically. Please install Python 3.12 from https://www.python.org/downloads/ (check 'Add python.exe to PATH') and re-run."
     exit 1
 }
 
@@ -187,11 +187,12 @@ if (-not $codeCmd) {
 
 if ($codeCmd) {
     Write-Ok "VS Code found at: $codeCmd"
-    Write-Info "Installing required VS Code extensions (Python & Jupyter)..."
+    Write-Info "Installing required VS Code extensions (Python, Jupyter & Data Wrangler)..."
     try {
         & $codeCmd --install-extension ms-python.python --force
         & $codeCmd --install-extension ms-toolsai.jupyter --force
-        Write-Ok "VS Code Python & Jupyter extensions installed."
+        & $codeCmd --install-extension ms-toolsai.datawrangler --force
+        Write-Ok "VS Code Python, Jupyter & Data Wrangler extensions installed."
     } catch {
         Write-Info "Could not install extensions via CLI; you can install 'Python' and 'Jupyter' from the Extensions tab in VS Code."
     }
@@ -204,7 +205,8 @@ if ($codeCmd) {
 # ---------------------------------------------------------------------------
 Write-Step "STEP 4: Setting Up Course Directory Structure & Files"
 
-$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$scriptPath = $MyInvocation.MyCommand.Path
+$scriptDir = if ($scriptPath) { Split-Path -Parent $scriptPath } else { (Get-Location).Path }
 if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-Path $scriptDir "03_labs_student_starters"))) {
     $repoRoot = $scriptDir
     Write-Ok "Already running inside course repository: $repoRoot"
@@ -220,7 +222,8 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
     }
 } else {
     # Running as standalone bootstrapper
-    $parentDir = [Environment]::GetFolderPath("MyDocuments")
+    $parentDir = Join-Path $env:USERPROFILE "Courses"
+    if (-not (Test-Path $parentDir)) { New-Item -ItemType Directory -Path $parentDir -Force | Out-Null }
     if (-not $parentDir -or -not (Test-Path $parentDir)) {
         $parentDir = $HOME
     }
@@ -265,6 +268,11 @@ if ((Test-Path (Join-Path $scriptDir "requirements.txt")) -and (Test-Path (Join-
 # ---------------------------------------------------------------------------
 Write-Step "STEP 5: Creating Virtual Environment (.venv) & Installing Packages"
 
+if ($repoRoot -like "*OneDrive*") {
+    Write-Info "Note: Your course folder appears to be inside OneDrive ($repoRoot)."
+    Write-Info "OneDrive sync can sometimes lock or offload .venv files. Recommended location: $env:USERPROFILE\Courses\$TargetDirName"
+}
+
 Push-Location $repoRoot
 $venvDir = Join-Path $repoRoot ".venv"
 $venvPython = Join-Path $venvDir "Scripts\python.exe"
@@ -283,7 +291,7 @@ Write-Ok "Virtual environment created: $venvPython"
 
 Write-Info "Upgrading pip and installing course requirements (pandas, duckdb, pyarrow, plotly, jupyter, ipykernel)..."
 & $venvPython -m pip install --upgrade pip
-& $venvPython -m pip install -r requirements.txt ipykernel
+& $venvPython -m pip install --prefer-binary -r requirements.txt ipykernel
 
 Write-Info "Registering .venv as a Jupyter Notebook Kernel..."
 & $venvPython -m ipykernel install --user --name "ife-bi-venv" --display-name "Python (.venv - BI & Big Data)"
@@ -301,7 +309,7 @@ $settingsJson = @'
     "jupyter.jupyterServerType": "local"
 }
 '@
-Set-Content -Path (Join-Path $vscodeDir "settings.json") -Value $settingsJson -Encoding UTF8
+[System.IO.File]::WriteAllText((Join-Path $vscodeDir "settings.json"), $settingsJson, (New-Object System.Text.UTF8Encoding($false)))
 Write-Ok "Configured .vscode/settings.json to auto-select .venv interpreter."
 
 # ---------------------------------------------------------------------------

@@ -25,17 +25,19 @@ This course bridges the fundamental engineering divide between physical shopfloo
 ## 2. Course Structure, Operations & Governance
 
 ### 2.1 Course Rhythm and Workload
-* **Workload:** 5 ECTS Credits (15h Lectures, 30h Laboratories, 30h Tutorials).
+* **Workload:** 6 ECTS Credits (`60 Academic Hours` contact: **`30h` Laboratories [10 × 3h] + `30h` Tutorials [7 Workshops]**; Winter 2026/2027 `03.11.2026 – 27.01.2027`).
 * **Weekly Operating Rhythm:**
-  * **Lectures:** Theoretical foundations, dimensional modeling paradigms, KPI formulations, and visual perception rules.
-  * **Laboratories (3h Hands-on):** Technical execution using Python, Pandas, DuckDB, SQL, and modern BI tooling across real-world datasets.
-  * **Tutorials (3h Team Workshops):** Architectural design, Data Architecture Diagrams, formal Kimball Star Schemas, metric mathematical definitions, and UX wireframing.
+  * **Theory & Architectural Briefings:** Theoretical foundations, dimensional modeling paradigms, KPI formulations, and visual perception rules integrated into lectures/workshops.
+  * **Laboratories (10 × 3h = 30h Hands-on, EN & FR tracks):** Technical execution using Python, Pandas, DuckDB, SQL, and Streamlit across real-world 60-day datasets.
+  * **Tutorials (7 Workshops = 30h Team Design):** Architectural design, Data Architecture Diagrams, formal Kimball Star Schemas (`DBML`), metric mathematical definitions, UX wireframing, and live Boardroom Defense.
 
 ### 2.2 Grading Policy & Academic Integrity
-* **Passing Threshold:** Minimum of $51\%$ required independently in both assessment components:
-  * **Knowledge Test (20%):** 30-minute individual assessment covering numerical methods, ELT paradigms, Kimball Star Schema, KPI formulas, and OLAP query engines.
-  * **Team Project & Defense (80%):** End-to-end implementation and live defense in 5-person engineering teams during Week 10.
-* **Attendance Mandate:** Mandatory attendance for Laboratories and Tutorials (maximum 1 unexcused absence per category). Team quorum requires at least $50\%$ of team members present at every workshop.
+* **Passing Threshold & Assessment Rubric (`>= 50%` required):** Team scores convert to individual grades (`5.0 / A` at `>= 91%` down to `3.0 / E` at `>= 50%`) via **Confidential Peer Assessment Matrix (CPAM)** + Git commit audit, culminating in **Final Boardroom Defense (`Tutorial #7`, `Wed 27.01.2027`)** following **Lab 10 Code Freeze (`Tue 19.01.2027`)**:
+  * **30%** — Data Engineering, DAMA DQ (`Proces DQ Gate 1`), Quarantine & RODO Compliance
+  * **30%** — Kimball Dimensional Model (`DBML == DuckDB`), Anti-Fan-Out Architecture & KPI Math Fidelity
+  * **25%** — Dual-Track Dashboard UX (`Tab 1 / Tab 2 / Tab 3`), Visual Ergonomics & Dynamic Interactivity
+  * **15%** — Business Insight (EUR ROI), EU AI Act Feasibility & Live Boardroom Defense Q&A (`17 min` slot: `12m` pitch+demo + `5m` Q&A & 60s live crisis drill)
+* **Attendance Mandate:** Mandatory attendance for Laboratories and Tutorials (**minimum 80% attendance**, **maximum 2 unexcused absences** allowed across the semester). Team quorum requires at least $50\%$ of team members present at every workshop.
 * **AI Policy (Rector Regulation No. 31/2025):**
   * *Permitted:* Coding syntax troubleshooting, code refactoring, brainstorming, and architectural ideation.
   * *Strictly Prohibited:* Unverified automated reporting, generating synthetic data models, or submitting unverified end-to-end solutions.

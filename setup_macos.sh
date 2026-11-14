@@ -74,9 +74,9 @@ else
 fi
 
 # ------------------------------------------------------------------------------
-# STEP 2: Check / Install Python (Requires Python 3.10+)
+# STEP 2: Check / Install Python (Requires Python 3.11+)
 # ------------------------------------------------------------------------------
-step "STEP 2: Checking Python Installation (Requires Python 3.10+)"
+step "STEP 2: Checking Python Installation (Requires Python 3.11+)"
 
 PYTHON_EXE=""
 
@@ -85,16 +85,13 @@ find_valid_python() {
         "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3"
         "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3"
         "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3"
-        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3"
         "/opt/homebrew/bin/python3.12"
         "/opt/homebrew/bin/python3.11"
         "/opt/homebrew/bin/python3.13"
-        "/opt/homebrew/bin/python3.10"
         "/opt/homebrew/bin/python3"
         "/usr/local/bin/python3.12"
         "/usr/local/bin/python3.11"
         "/usr/local/bin/python3.13"
-        "/usr/local/bin/python3.10"
         "/usr/local/bin/python3"
     )
     # Only check /usr/bin/python3 if Xcode CLT is actually installed (otherwise it pops up a blocking GUI dialog!)
@@ -104,7 +101,7 @@ find_valid_python() {
 
     for cand in "${candidates[@]}"; do
         if [ -x "$cand" ]; then
-            if "$cand" -c "import sys, venv; sys.exit(0 if sys.version_info >= (3, 10) else 1)" >/dev/null 2>&1; then
+            if "$cand" -c "import sys, venv; sys.exit(0 if sys.version_info >= (3, 11) else 1)" >/dev/null 2>&1; then
                 PYTHON_EXE="$cand"
                 return 0
             fi
@@ -114,7 +111,7 @@ find_valid_python() {
 }
 
 if ! find_valid_python; then
-    info "Python 3.10+ not found. Installing official Python 3.12 (universal2 macOS package, no Xcode required)..."
+    info "Python 3.11+ not found. Installing official Python 3.12 (universal2 macOS package, no Xcode required)..."
     PKG_URL="https://www.python.org/ftp/python/3.12.7/python-3.12.7-macos11.pkg"
     PKG_PATH="/tmp/python-3.12.7-macos11.pkg"
     curl -fSL "$PKG_URL" -o "$PKG_PATH"
@@ -137,7 +134,7 @@ if ! find_valid_python; then
 fi
 
 if [ -z "$PYTHON_EXE" ]; then
-    err "Could not locate Python 3.10+ after installation. Please install Python 3.12 from https://www.python.org/downloads/macos/ and re-run this script."
+    err "Could not locate Python 3.11+ after installation. Please install Python 3.12 from https://www.python.org/downloads/macos/ and re-run this script."
     exit 1
 fi
 
@@ -181,10 +178,11 @@ fi
 CODE_CLI="${CODE_APP}/Contents/Resources/app/bin/code"
 if [ -x "$CODE_CLI" ]; then
     ok "VS Code found at: ${CODE_APP}"
-    info "Installing required VS Code extensions (Python & Jupyter)..."
+    info "Installing required VS Code extensions (Python, Jupyter & Data Wrangler)..."
     "$CODE_CLI" --install-extension ms-python.python --force >/dev/null 2>&1 || true
     "$CODE_CLI" --install-extension ms-toolsai.jupyter --force >/dev/null 2>&1 || true
-    ok "VS Code Python & Jupyter extensions installed."
+    "$CODE_CLI" --install-extension ms-toolsai.datawrangler --force >/dev/null 2>&1 || true
+    ok "VS Code Python, Jupyter & Data Wrangler extensions installed."
 else
     info "VS Code CLI binary not found; you can install extensions manually inside VS Code."
 fi
@@ -194,7 +192,12 @@ fi
 # ------------------------------------------------------------------------------
 step "STEP 4: Setting Up Course Directory Structure & Files"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_SOURCE="${BASH_SOURCE[0]:-}"
+if [ -n "${SCRIPT_SOURCE}" ] && [ -f "${SCRIPT_SOURCE}" ]; then
+    SCRIPT_DIR="$(cd "$(dirname "${SCRIPT_SOURCE}")" && pwd)"
+else
+    SCRIPT_DIR="$(pwd)"
+fi
 
 # Check if we are already inside the course repository
 if [ -f "${SCRIPT_DIR}/requirements.txt" ] && [ -d "${SCRIPT_DIR}/03_labs_student_starters" ]; then
@@ -205,10 +208,8 @@ if [ -f "${SCRIPT_DIR}/requirements.txt" ] && [ -d "${SCRIPT_DIR}/03_labs_studen
         (cd "$REPO_ROOT" && git pull --ff-only) || info "Keeping existing local files."
     fi
 else
-    REPO_ROOT="${HOME}/Documents/${TARGET_DIR_NAME}"
-    if [ ! -d "${HOME}/Documents" ]; then
-        REPO_ROOT="${HOME}/${TARGET_DIR_NAME}"
-    fi
+    mkdir -p "${HOME}/Courses"
+    REPO_ROOT="${HOME}/Courses/${TARGET_DIR_NAME}"
 
     # Determine if real Git is available without triggering Xcode CLT popup
     REAL_GIT=""
@@ -249,6 +250,14 @@ fi
 # STEP 5: Create Virtual Environment (.venv) & Install Dependencies
 # ------------------------------------------------------------------------------
 step "STEP 5: Creating Virtual Environment (.venv) & Installing Packages"
+
+case "$REPO_ROOT" in
+    "${HOME}/Documents"|"${HOME}/Documents/"*)
+        info "Note: Your course folder is inside ~/Documents."
+        info "If iCloud 'Desktop & Documents Folders' is enabled, macOS may offload files inside .venv."
+        info "Recommended location if you notice missing packages later: ${HOME}/Courses/${TARGET_DIR_NAME}"
+        ;;
+esac
 
 cd "$REPO_ROOT"
 VENV_DIR="${REPO_ROOT}/.venv"

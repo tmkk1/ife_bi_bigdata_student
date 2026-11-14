@@ -1,4 +1,4 @@
-Poniżej znajdują się propozycje trzech kompleksowych studiów przypadków (*Case Studies*) w formie gotowych do wręczenia studentom „One-Pagerów” (przygotowanych po angielsku, gdyż przedmiot prowadzony jest w języku angielskim, wraz z polskim komentarzem metodycznym i wskazaniem konkretnych, publicznych zbiorów danych).
+Poniżej znajdują się propozycje trzech kompleksowych studiów przypadków (*Case Studies*) w formie gotowych do wręczenia studentom „One-Pagerów” (przygotowanych po angielsku oraz francusku — w repozytorium laboratoria `Labs 01–10` posiadają wersje **EN** i **FR**, wraz z polskim komentarzem metodycznym).
 
 Praca w **5-osobowych zespołach** wymaga odpowiednio szerokiego zakresu zadań, a przydzielenie tego samego *Case Study* dwóm różnym grupom to świetny zabieg dydaktyczny. Aby wymusić na bliźniaczych grupach zupełnie inne podejście do *Data Storytellingu* i budowy dashboardów, w każdym One-Pagerze wprowadzono **dwie odmienne perspektywy zarządcze (Perspektywa A vs. Perspektywa B)**.
 
@@ -8,11 +8,11 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 
 1. **Data Integration Engineer (Warstwa Bronze / E\&L):** Odpowiada za pobranie źródeł, ujednolicenie formatów dat/czasu i złączenie tabel w Pandas.
 
-2. **Data Quality & Numerical Analyst (Warstwa Silver / Transform):** Odpowiada za profilowanie jakości, imputację braków oraz numeryczną detekcję wartości odstających (IQR, 3 sigmy) i normalizację.
+2. **Data Quality & Numerical Analyst (Warstwa Silver / Transform):** Odpowiada za profilowanie jakości, imputację braków oraz numeryczną detekcję wartości odstających (IQR, fizyczne limity) i normalizację.
 
 3. **Data Warehouse Architect (Warstwa Gold / Modeling):** Odpowiada za projekt Schematu Gwiazdy (dbdiagram.io) oraz budowę tabel Faktów i Wymiarów w DuckDB/SQL.
 
-4. **KPI & Business Logic Developer:** Odpowiada za matematyczną definicję i implementację mierników syntetycznych (np. OEE, OTIF, SEC) oraz przekrojów OLAP.
+4. **KPI & Business Logic Developer:** Odpowiada za matematyczną definicję i implementację mierników syntetycznych (np. OEE, OTIF, Bradford $B$) oraz przekrojów OLAP.
 
 5. **BI & Data Storytelling Lead:** Odpowiada za makiety UX/UI, budowę interaktywnego dashboardu oraz spójność narracji biznesowej.
 
@@ -22,18 +22,18 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 
 ### **Skąd wziąć dane (Realne zbiory Open Source do połączenia):**
 
-* **Zbiór bazowy 1 (Kaggle):** *AI4I 2020 Predictive Maintenance Dataset* (autor: Stephan Matzka / UCI) – baza fizyczna dla symulacji parametrów pracy pras hydraulicznych na horyzoncie **60 dni** (`2026-10-01` – `2026-11-30`) z podziałem na **3 natywne formaty** (`sensor_telemetry.csv`, `maintenance_logs.json`, `machines_and_shifts.xlsx`).
+* **Zbiór bazowy 1 (Kaggle):** *AI4I 2020 Predictive Maintenance Dataset* (autor: Stephan Matzka / UCI) – baza fizyczna dla symulacji parametrów pracy pras hydraulicznych na horyzoncie **60 dni operacyjnych** (`2026-10-01` – `2026-11-29`; nocny quart `S3` z `2026-11-29` kończy się `2026-11-30 06:00`) z podziałem na **3 natywne formaty** (`sensor_telemetry.csv`, `maintenance_logs.json`, `machines_and_shifts.xlsx`).
 
 ### **ONE-PAGER 1 (Gotowy materiał dla studentów — 60-Day Simulation)**
 
 **CASE STUDY \#1: SmartPress Automotive – Shopfloor Performance & OEE Analytics**
 
-**1\. Business Context** SmartPress Automotive is a Tier-1 supplier of stamped metal components for the European automotive industry. Over the 60-day diagnostic window (`2026-10-01` – `2026-11-30`), the plant in Central Poland has experienced a noticeable drop in production efficiency (`70.38%` OEE) and high unplanned stops. Management has raw exports from SCADA sensors, the CMMS ticketing system, and ERP master schedules, and needs a unified BI system that eliminates join fan-out traps (`480.0 min` exact shift capacity).
+**1\. Business Context** SmartPress Automotive is a Tier-1 supplier of stamped metal components for the European automotive industry. Over the 60-day operational window (`2026-10-01` – `2026-11-29`, with `2026-11-29 S3` closing `2026-11-30 06:00`), the plant in Central Poland has experienced a noticeable drop in production efficiency (`70.38%` OEE) and high unplanned stops. Management has raw exports from SCADA sensors, the CMMS ticketing system, and ERP master schedules, and needs a unified BI system that eliminates join fan-out traps (`480.0 min` exact shift capacity).
 
 **2\. Source Data Architecture (Your Data Pack — 3 Native Formats)**
 
-* **`sensor_telemetry.csv` (SCADA System):** 23,164 high-frequency logs (`machine_id`, `timestamp`, air & process temperature, rotational speed RPM, torque Nm, tool wear min, and output/defects). *(Injected DQ anomalies quarantined at Gate 1: out-of-window dates, negative RPM, impossible wear).*
-* **`maintenance_logs.json` (CMMS System):** 286 planned/unplanned tickets, failure mode codes (`TWF`, `HDF`, `PWF`, `OSF`), repair duration (`MTTR`), and direct maintenance costs.
+* **`sensor_telemetry.csv` (SCADA System):** 23,164 high-frequency logs (`machine_id`, `timestamp`, air & process temperature, rotational speed RPM, torque Nm, tool wear min, and output/defects). *(Injected DQ anomalies quarantined/cleaned at Gate 1: out-of-window `2099-*` dates, orphan `PRESS_99`, torque spikes `-999 / 4850 Nm`, `scrap_units > produced_units`, key casing drift `'Press_01 '`/`'P-02'`/`'press_03'`, MQTT dupes, and `NaN` `process_temp_K` interpolated per press).*
+* **`maintenance_logs.json` (CMMS System):** 286 workorders (`ticket_id`, `event_date`, `machine_code`, `downtime_type` [`'Unplanned'`/`'unplanned'`/`'Preventive'`], `failure_mode` [e.g. `'Stamping Die Misalignment'`, `'Hydraulic Pressure Loss'`, `'Electrical Glitch'`, `'Sensor Calibration Drift'`, `'Tooling Replacement'`], `repair_duration_min`), including ghost ticket `CMMS-20269999` (`PRESS_99`, `2099-01-01`). Direct downtime EUR cost is derived in Gold via `Machines.downtime_cost_per_hour_eur`.
 * **`machines_and_shifts.xlsx` (ERP Master Data):** 3 tabs (`Machines`, `Shifts` with `480.0 min` nominal capacity, and `Product_Variants` `L`/`M`/`H`).
 
 **3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**
@@ -45,7 +45,7 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 **4\. Dual Storytelling Perspectives (Track A vs Track B):**
 
 * **Group A Focus – Chief Operations Officer (COO):** Shift-by-shift OEE bottlenecks (e.g., `S3 PRESS_02` Variant `H`), capacity utilization, and scrap EUR impact.
-* **Group B Focus – Head of Maintenance & Reliability:** Tool-wear threshold degradation (`> 180 min` driving breakdowns), failure Pareto (`TWF`/`HDF`), and MTTR reduction ROI.
+* **Group B Focus – Head of Maintenance & Reliability:** Tool-wear threshold degradation (`> 180 min` driving breakdowns), failure Pareto (`Stamping Die Misalignment`, `Hydraulic Pressure Loss`, etc.), and MTTR reduction ROI.
 
 ## **CASE STUDY 2: Przemysłowa Dystrybucja Hydrauliki, OTIF i Marża Net (DataCo)**
 
@@ -53,30 +53,30 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 
 ### **Skąd wziąć dane:**
 
-* *Architektura pakietu 60-dniowego:* Pełna symulacja **60 dni** (`2026-10-01` – `2026-11-30`) w **3 heterogenicznych formatach** (`order_items_trans.csv`, `shipment_events.json`, `master_catalog.xlsx`), eliminująca ryzyko mnożenia sum zamówienia przez wielokrotne zdarzenia WMS.
+* *Architektura pakietu 60-dniowego:* Pełna symulacja **60 dni operacyjnych** (`2026-10-01` – `2026-11-29`) w **3 heterogenicznych formatach** (`order_items_trans.csv`, `shipment_events.json`, `master_catalog.xlsx`), eliminująca ryzyko mnożenia sum zamówienia przez wielokrotne zdarzenia WMS.
 
 ### **ONE-PAGER 2 (Gotowy materiał dla studentów — 60-Day Simulation)**
 
 **CASE STUDY \#2: DataCo Industrial Hydraulics – Supply Chain & Net Margin Intelligence**
 
-**1\. Business Context** DataCo distributes heavy industrial hydraulics (`Hoses`, `Pumps`, `Valves`, `Filters`) across European regional hubs (`HUB-South-Katowice`, `HUB-Central-Lodz`, etc.). Despite €29.95M net sales over 60 days, overall OTIF has fallen to `74.07%` and SLA penalties + freight surcharges erode profitability—particularly on `VIP Heavy OEM` accounts.
+**1\. Business Context** DataCo distributes heavy industrial hydraulics (`Hydraulic Pumps`, `High-Pressure Hoses`, `Control Valves`, `Actuators & Cylinders`, `Filtration & Conditioning`) across European regional hubs (`HUB-Central-Frankfurt`, `HUB-Poland-Wroclaw`, `HUB-South-Katowice`, `HUB-North-Gdansk`). Despite €29.95M net sales over 60 days, overall OTIF has fallen to `74.07%` and SLA penalties + freight surcharges erode profitability—particularly on `VIP Heavy OEM` accounts.
 
 **2\. Source Data Architecture (Your Data Pack — 3 Native Formats)**
 
-* **`order_items_trans.csv` (ERP Sales Module):** 8,623 transaction lines across 4,774 orders (`ordered_qty`, `delivered_qty`, unit price, discount %, tax, COGS).
-* **`shipment_events.json` (WMS / Carrier Telemetry):** 22,746 multi-milestone events (`PICKED`, `PACKED`, `DISPATCHED`, `DELIVERED`), warehouse dwell times, carrier codes, and SLA penalty triggers.
+* **`order_items_trans.csv` (ERP Sales Module):** 8,623 transaction lines across 4,774 clean orders (`order_id`, `order_date`, `customer_id`, `product_id`, `ordered_qty`, `delivered_qty`, `unit_price_eur`, `discount_rate`; COGS sourced from `Products.standard_cost_eur` in MDM).
+* **`shipment_events.json` (WMS / Carrier Telemetry):** 22,746 multi-milestone events (`ORDER_CONFIRMED`, `PICKING_COMPLETED`, `DISPATCHED_FROM_HUB`, `IN_TRANSIT_HUB_SCAN`, `DELIVERED_AT_GATE`, `DELIVERY_EXCEPTION`), `warehouse_hub`, `shipping_mode`, `carrier_code`, `scheduled_shipping_days`, `freight_cost_eur`, and `sla_penalty_eur`.
 * **`master_catalog.xlsx` (MDM System):** 4 tabs (`Products`, `Customers`, `Warehouses`, `Carrier_SLA_Policies`).
 
 **3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**
 
 * **Anti-Fan-Out Integration (Silver):** Collapse 22,746 WMS milestone events to 1 row per `order_id` *before* prorating freight & SLA penalties across order lines so net revenue (`€29.95M`) and net profit (`€8.50M`) never double-count.
-* **Dimensional Modeling (Gold):** Build `Fact_Order_Lines` + `Fact_Shipments` linked to `Dim_Product`, `Dim_Customer`, `Dim_Warehouse`, `Dim_Carrier`, and `Dim_Date`.
+* **Dimensional Modeling (Gold):** Build `Fact_Orders` (pro-rated line grain) + `Fact_Shipment_Checkpoints` (order grain) linked to `Dim_Product`, `Dim_Customer`, `Dim_Warehouse`, `Dim_Carrier`, and `Dim_Date`.
 * **Synthetic Metrics (KPIs):** True **OTIF (%)** (`On-Time AND In-Full`), Warehouse Dwell Time (h), Prorated Net Profit (`€` / `%`), and SLA Penalty Leakage.
 
 **4\. Dual Storytelling Perspectives (Track A vs Track B):**
 
-* **Group A Focus – VP of Supply Chain & Logistics:** Warehouse dwell bottlenecks (e.g., `HUB-South-Katowice` Urgent mode & `RABEN_LOGISTICS`), carrier SLA adherence, and late-delivery recovery.
-* **Group B Focus – Commercial & FP&A Director:** Margin erosion waterfall (`Discount + Freight + SLA Penalties`), proving why `VIP Heavy OEM` (`VIP Hoses`) generates negative net margin despite high gross revenue.
+* **Group A Focus – VP Commercial & Pricing Control:** Margin erosion waterfall (`Discount + Freight + SLA Penalties`), proving why `VIP Heavy OEM` (`High-Pressure Hoses`) generates negative net margin (`-€152.3k / -7.04%`) despite high gross revenue.
+* **Group B Focus – Director of Supply Chain & Logistics:** Warehouse dwell bottlenecks (e.g., `HUB-South-Katowice` Urgent mode & `RABEN_LOGISTICS`), carrier SLA adherence, and late-delivery recovery.
 
 ## **CASE STUDY 3: People Analytics Conforme RODO, Burnout i Koszty Zmian (Nexis Workforce)**
 
@@ -90,8 +90,8 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 
 **2\. Source Data Architecture (Your Data Pack)**
 
-* **`shift_production_performance.csv` (MES System):** 720 line-shift rows across 60 days (`LINE_01..LINE_04 × S1..S3`) capturing output targets, produced/good/scrap units, rework, and scrap EUR waste.
-* **`workforce_events.json` (Badge Telemetry, QA Audits & Absences):** ~25,585 events recording shift clock-ins/outs, optical QA defects, overtime approvals, and sick leaves (plus sensitive `details_medical_note` that MUST be purged!). Injects duplicate gate scans (`<60s`), `145h`/`-3.5h` glitches, ghost IDs, and `S3` cross-midnight scans.
+* **`shift_production_performance.csv` (MES System):** 720 line-shift rows across 60 days (`2026-10-01` – `2026-11-29`, `LINE_01..LINE_04 × S1..S3`) capturing output targets, produced/good/scrap units, rework, and scrap EUR waste (`operator_headcount_present` also includes anonymous temporary `spot_fill` workers on 268/720 shifts not present in badged event telemetry).
+* **`workforce_events.json` (Badge Telemetry, QA Audits & Absences):** 25,585 events with nested **`details`** payload (`pd.json_normalize(raw, sep="_")` -> `details_*`) recording shift clock-ins/outs, optical QA defects, overtime approvals, and sick leaves (plus sensitive `details_medical_note` that MUST be purged!). Injects duplicate gate scans (`<60s`), `145h`/`-3.5h` glitches, ghost IDs, and `S3` cross-midnight scans.
 * **`workforce_roster_and_skills.xlsx` (HR Master Registry):** 4 tabs (`Employees` containing RODO PII fields to purge pre-Silver, `Skill_Matrix`, `Incentive_Policies` €250/mo bonus `<=1.80%` scrap, and `Shift_Staffing_Plan`).
 
 **3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**

@@ -61,8 +61,8 @@ def check_python_version() -> bool:
     print(f"  Python Executable: {sys.executable}")
     print(f"  Inside .venv     : {'YES (Isolated Environment)' if in_venv else 'NO (Global Python - activate .venv!)'}")
 
-    if (v.major, v.minor) < (3, 10):
-        print("  [FAIL] Python 3.10+ is required (3.11 or 3.12 recommended).")
+    if (v.major, v.minor) < (3, 11):
+        print("  [FAIL] Python 3.11+ is required (3.11, 3.12, or 3.13 recommended).")
         return False
     print("  [OK]   Python version is compatible.")
     return True
@@ -154,7 +154,7 @@ def main() -> int:
         return 0
     else:
         print("  WARNING: Some checks failed. Please review the messages above")
-        print("  or re-run setup_windows.bat (Windows) / ./setup_macos.sh (macOS).")
+        print("  or re-run setup_windows.bat (Windows) / ./setup_macos.sh (macOS) / ./setup_linux.sh (Linux).")
         print("=" * 68 + "\n")
         return 1
 
