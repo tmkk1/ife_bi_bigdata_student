@@ -33,10 +33,10 @@ This course bridges the fundamental engineering divide between physical shopfloo
 
 ### 2.2 Grading Policy & Academic Integrity
 * **Passing Threshold & Assessment Rubric (`>= 50%` required):** Team scores convert to individual grades (`5.0 / A` at `>= 91%` down to `3.0 / E` at `>= 50%`) via **Confidential Peer Assessment Matrix (CPAM)** + Git commit audit, culminating in **Final Boardroom Defense (`Tutorial #7`, `Wed 27.01.2027`)** following **Lab 10 Code Freeze (`Tue 19.01.2027`)**:
-  * **30%** — Data Engineering, DAMA DQ (`Proces DQ Gate 1`), Quarantine & RODO Compliance
+  * **30%** — Data Engineering, DAMA DQ (`Proces DQ Gate 1`), Quarantine & Zero-PII Privacy Compliance
   * **30%** — Kimball Dimensional Model (`DBML == DuckDB`), Anti-Fan-Out Architecture & KPI Math Fidelity
   * **25%** — Dual-Track Dashboard UX (`Tab 1 / Tab 2 / Tab 3`), Visual Ergonomics & Dynamic Interactivity
-  * **15%** — Business Insight (EUR ROI), EU AI Act Feasibility & Live Boardroom Defense Q&A (`17 min` slot: `12m` pitch+demo + `5m` Q&A & 60s live crisis drill)
+  * **15%** — Business Insight (EUR ROI), Governance Feasibility & Live Boardroom Defense Q&A (`17 min` slot: `12m` pitch+demo + `5m` Q&A & 60s live crisis drill)
 * **Attendance Mandate:** Mandatory attendance for Laboratories and Tutorials (**minimum 80% attendance**, **maximum 2 unexcused absences** allowed across the semester). Team quorum requires at least $50\%$ of team members present at every workshop.
 * **AI Policy (Rector Regulation No. 31/2025):**
   * *Permitted:* Coding syntax troubleshooting, code refactoring, brainstorming, and architectural ideation.

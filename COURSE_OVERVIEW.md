@@ -78,35 +78,35 @@ Aby uniknąć sytuacji, w której dwie osoby piszą kod, a trzy się przyglądaj
 * **Group A Focus – VP Commercial & Pricing Control:** Margin erosion waterfall (`Discount + Freight + SLA Penalties`), proving why `VIP Heavy OEM` (`High-Pressure Hoses`) generates negative net margin (`-€152.3k / -7.04%`) despite high gross revenue.
 * **Group B Focus – Director of Supply Chain & Logistics:** Warehouse dwell bottlenecks (e.g., `HUB-South-Katowice` Urgent mode & `RABEN_LOGISTICS`), carrier SLA adherence, and late-delivery recovery.
 
-## **CASE STUDY 3: People Analytics Conforme RODO, Burnout i Koszty Zmian (Nexis Workforce)**
+## **CASE STUDY 3: Privacy-Safe People Analytics, Burnout & Shift Costs (Nexis Workforce)**
 
 *(Industrial Workforce Planning, Bradford Burnout & Compliance Analytics)*
 
-### **ONE-PAGER 3 (Gotowy materiał dla studentów — 60-Day Simulation)**
+### **ONE-PAGER 3 (60-Day Simulation Case Brief)**
 
 **CASE STUDY \#3: Nexis Precision Automotive Components Sp. z o.o. — Workforce Analytics & Operations**
 
-**1\. Business Context** Located in Wrocław, Nexis runs four electromechanical actuator assembly lines (`LINE_01..LINE_04`) across three continuous shifts (`S1/S2/S3`) staffed by 165 operators (115 Permanent + 50 Temporary Agency). Over 60 days, labor cost (€961k with 1.5x overtime premiums) and scrap losses (€934k) threaten margins, while management relies on flawed averages blaming night shifts (`S3`) without noticing RODO privacy exposure in raw HR spreadsheets.
+**1\. Business Context** Located in Wrocław, Nexis runs four electromechanical actuator assembly lines (`LINE_01..LINE_04`) across three continuous shifts (`S1/S2/S3`) staffed by 165 operators (115 Permanent + 50 Temporary Agency). Over 60 days, labor cost (€961k with 1.5x overtime premiums) and scrap losses (€934k) threaten margins, while management relies on flawed averages blaming night shifts (`S3`) without noticing raw PII privacy exposure in legacy HR spreadsheets.
 
 **2\. Source Data Architecture (Your Data Pack)**
 
 * **`shift_production_performance.csv` (MES System):** 720 line-shift rows across 60 days (`2026-10-01` – `2026-11-29`, `LINE_01..LINE_04 × S1..S3`) capturing output targets, produced/good/scrap units, rework, and scrap EUR waste (`operator_headcount_present` also includes anonymous temporary `spot_fill` workers on 268/720 shifts not present in badged event telemetry).
 * **`workforce_events.json` (Badge Telemetry, QA Audits & Absences):** 25,585 events with nested **`details`** payload (`pd.json_normalize(raw, sep="_")` -> `details_*`) recording shift clock-ins/outs, optical QA defects, overtime approvals, and sick leaves (plus sensitive `details_medical_note` that MUST be purged!). Injects duplicate gate scans (`<60s`), `145h`/`-3.5h` glitches, ghost IDs, and `S3` cross-midnight scans.
-* **`workforce_roster_and_skills.xlsx` (HR Master Registry):** 4 tabs (`Employees` containing RODO PII fields to purge pre-Silver, `Skill_Matrix`, `Incentive_Policies` €250/mo bonus `<=1.80%` scrap, and `Shift_Staffing_Plan`).
+* **`workforce_roster_and_skills.xlsx` (HR Master Registry):** 4 tabs (`Employees` containing direct PII fields to purge pre-Silver, `Skill_Matrix`, `Incentive_Policies` €250/mo bonus `<=1.80%` scrap, and `Shift_Staffing_Plan`).
 
 **3\. Engineering & Analytical Challenges (`Proces DQ Gate 1` + Gold)**
 
-* **Mandatory RODO Purge (`DQ-C3-RODO`):** Physically drop `first_name`, `last_name`, `corporate_email`, `national_id_masked`, and `details_medical_note` prior to Silver/Gold export (`0` PII columns verified!).
+* **Mandatory PII Purge (`DQ-C3-PII`):** Physically drop `first_name`, `last_name`, `corporate_email`, `national_id_masked`, and `details_medical_note` prior to Silver/Gold export (`0` PII columns verified!).
 * **Time & Causal Math:** Align midnight `S3` events deterministically (`S1:-2h, S2:-3h, S3:-9h`), enforce causal `[d-7, d-1]` prior overtime windows (`prior_7d_ot_hours`), cluster contiguous sick spells for the **Bradford Factor ($B = S^2 \times D$)**, and apply true **`1.5x` OT** wage multipliers.
 * **Dimensional Modeling (Gold):** Build clean Star Schema (`Fact_Shift_Production`, `Fact_Daily_Staffing_Attendance`, `Fact_Absence_Events`) linked to `Dim_Date`, `Dim_Shift`, `Dim_Assembly_Line`, and pseudonymized `Dim_Employee`.
 
 **4\. Dual Storytelling Perspectives:**
 
-* **Group A Focus – HR Director:** Audit Permanent vs Agency churn & bonus exclusion fairness, prove how `prior_7d_ot >= 8h` drives sick absences (`Bradford B >= 400` critical tier), and enforce RODO / EU AI Act Annex III safeguards.
+* **Group A Focus – HR Director:** Audit Permanent vs Agency churn & bonus exclusion fairness, prove how `prior_7d_ot >= 8h` drives sick absences (`Bradford B >= 400` critical tier), and enforce strict PII minimization & human-in-the-loop (HITL) welfare governance.
 * **Group B Focus – VP of Manufacturing Operations:** Uncover the true bottleneck across `Line × Shift` L2+ Certified Coverage (e.g., morning `LINE_03 S1` collapse vs `S3`), quantify `1.5x` OT payroll + fatigued scrap losses, and model **Dynamic Implied Missing Monthly FTEs** reacting live to date slicers.
 
-### **Podsumowanie dydaktyczne – dlaczego te 3 zestawy sprawdzą się idealnie?**
+### **Pedagogical Summary — Why These 3 Case Studies Work Together**
 
-1. **Różnorodność problemów inżynierskich:** Masz tu 3 filary nowoczesnego przemysłu: **Utrzymanie Ruchu / OEE** (Case 1), **Łańcuch Dostaw / OTIF i Marże Net** (Case 2) oraz **Kapitał Ludzki, Burnout i RODO / People Analytics** (Case 3).
-2. **Pełna parzystość 3 formatów (`CSV + JSON + XLSX`):** W każdym studium przypadku studenci integrują 3 heterogeniczne źródła na horyzoncie 60 dni z jawnymi regułami `Proces DQ Gate 1` oraz bramką kwarantanny.
-3. **Rygor matematyczny i anty-fan-out (PEK):** Wyeliminowanie złączeń iloczynowych (`480.0 min` w SmartPress, alokacja prorata frachtu w DataCo, przyczynowe okno `prior_7d_ot` i czynnik Bradforda w Nexis) gwarantuje rzetelną spójność od Bronze aż po kafelki dashboardu.
+1. **Diversity of Engineering Problems:** Three pillars of modern industry: **Maintenance & OEE** (Case 1), **Supply Chain OTIF & Net Margin** (Case 2), and **Workforce Analytics, Burnout & PII Privacy Governance** (Case 3).
+2. **Full 3-Format Parity (`CSV + JSON + XLSX`):** Each case study integrates three heterogeneous 60-day sources through explicit `Proces DQ Gate 1` rules and an audited quarantine gate.
+3. **Mathematical & Anti-Fan-Out Rigor:** Eliminating Cartesian join inflation (`480.0 min` at SmartPress, pro-rata freight allocation at DataCo, causal `prior_7d_ot` windows and Bradford spells at Nexis) guarantees full consistency from Bronze all the way to executive dashboard KPI cards.
