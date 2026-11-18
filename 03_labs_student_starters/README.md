@@ -9,7 +9,11 @@ Each lab directory provides **both English (`EN`) and French (`FR`) tracks** acr
 - **Executed Solution Notebooks (`_solution.ipynb` EN & `_solution_fr.ipynb` FR)** (for instructor reference and post-lab review; excluded from early student release builds).
 - **Tutor Instructions & 3-Hour Session Agendas (`tutor_instructions_and_agenda.md` EN & `tutor_instructions_and_agenda_fr.md` FR)** for all Labs 01–10.
 
-All guided Labs 02–10 run on the neutral **Case 0 (`case0_europack_bottling` — EuroPack Beverage Bottling)** teaching dataset so every student learns the complete Lakehouse & BI pipeline fairly without leaking solutions for any of the 3 graded squad project cases (**Case 1 SmartPress**, **Case 2 DataCo**, **Case 3 Nexis**). All lab code reads inputs dynamically from `lab_02_bronze_ingestion_and_profiling/data/` (student repo) or `05_case_studies_reference_solutions/` (instructor repo) and writes practice deliverables cleanly into `sandbox_outputs/case0_europack_bottling/` so reference datasets are never overwritten.
+All guided Labs 02–10 run on the neutral **Case 0 (`case0_europack_bottling` — EuroPack Beverage Bottling)** teaching dataset so every student learns the complete Lakehouse & BI pipeline fairly without leaking solutions for any of the 3 graded squad project cases (**Case 1 SmartPress**, **Case 2 DataCo**, **Case 3 Nexis**). Read the full Case 0 business brief before starting Lab 02:
+- **English Case 0 Description:** [`case_00_europack_bottling_en.md`](case_00_europack_bottling_en.md)
+- **Description du Cas 0 (Français) :** [`case_00_europack_bottling_fr.md`](case_00_europack_bottling_fr.md)
+
+All lab code reads inputs dynamically from `lab_02_bronze_ingestion_and_profiling/data/` (student repo) or `05_case_studies_reference_solutions/` (instructor repo) and writes practice deliverables cleanly into `sandbox_outputs/case0_europack_bottling/` so reference datasets are never overwritten.
 
 ## 10-Lab Curriculum Schedule
 
