@@ -170,7 +170,8 @@ venv.bak/
 03_labs_student_starters/sandbox_outputs/**/*.csv
 03_labs_student_starters/sandbox_outputs/**/*.dbml
 03_labs_student_starters/sandbox_outputs/**/signoff_report.json
-03_labs_student_starters/lab_09_dual_track_cockpit_workshop/dashboard_app*.py
+03_labs_student_starters/lab_08_dual_track_cockpit_part1/dashboard_app*.py
+03_labs_student_starters/lab_09_dual_track_cockpit_part2/dashboard_app*.py
 
 # Operating System Files
 .DS_Store

@@ -29,6 +29,11 @@ REQUIRED_PACKAGES = [
 ]
 
 CASE_RAW_FILES = {
+    "case0_europack_bottling": [
+        "line_telemetry.csv",
+        "stoppage_logs.json",
+        "plant_master_data.xlsx",
+    ],
     "case1_smartpress_automotive": [
         "sensor_telemetry.csv",
         "maintenance_logs.json",

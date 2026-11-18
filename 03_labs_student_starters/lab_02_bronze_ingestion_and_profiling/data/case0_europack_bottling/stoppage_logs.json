@@ -1,0 +1,2630 @@
+[
+  {
+    "log_id": "STOP-20260001",
+    "event_date": "2026-10-01 07:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 60,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260002",
+    "event_date": "2026-10-01 19:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260003",
+    "event_date": "2026-10-01 21:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260004",
+    "event_date": "2026-10-02 00:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260005",
+    "event_date": "2026-10-02 00:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260006",
+    "event_date": "2026-10-02 17:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260007",
+    "event_date": "2026-10-02 19:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260008",
+    "event_date": "2026-10-02 22:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260009",
+    "event_date": "2026-10-02 22:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260010",
+    "event_date": "2026-10-03 11:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260011",
+    "event_date": "2026-10-03 12:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260012",
+    "event_date": "2026-10-03 18:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260013",
+    "event_date": "2026-10-03 20:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260014",
+    "event_date": "2026-10-04 01:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260015",
+    "event_date": "2026-10-04 09:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260016",
+    "event_date": "2026-10-04 12:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260017",
+    "event_date": "2026-10-04 18:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260018",
+    "event_date": "2026-10-05 00:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260019",
+    "event_date": "2026-10-05 06:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260020",
+    "event_date": "2026-10-05 08:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260021",
+    "event_date": "2026-10-05 23:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260022",
+    "event_date": "2026-10-05 23:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260023",
+    "event_date": "2026-10-06 00:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260024",
+    "event_date": "2026-10-06 00:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260025",
+    "event_date": "2026-10-06 17:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260026",
+    "event_date": "2026-10-06 20:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260027",
+    "event_date": "2026-10-06 21:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260028",
+    "event_date": "2026-10-06 23:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260029",
+    "event_date": "2026-10-07 11:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260030",
+    "event_date": "2026-10-07 13:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260031",
+    "event_date": "2026-10-07 15:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260032",
+    "event_date": "2026-10-07 17:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260033",
+    "event_date": "2026-10-08 05:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260034",
+    "event_date": "2026-10-08 09:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260035",
+    "event_date": "2026-10-08 10:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260036",
+    "event_date": "2026-10-08 13:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260037",
+    "event_date": "2026-10-09 00:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260038",
+    "event_date": "2026-10-09 04:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260039",
+    "event_date": "2026-10-09 07:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260040",
+    "event_date": "2026-10-09 11:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260041",
+    "event_date": "2026-10-10 00:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260042",
+    "event_date": "2026-10-10 02:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260043",
+    "event_date": "2026-10-10 05:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260044",
+    "event_date": "2026-10-10 12:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260045",
+    "event_date": "2026-10-10 18:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260046",
+    "event_date": "2026-10-10 21:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260047",
+    "event_date": "2026-10-11 06:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260048",
+    "event_date": "2026-10-11 12:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260049",
+    "event_date": "2026-10-11 13:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260050",
+    "event_date": "2026-10-11 18:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260051",
+    "event_date": "2026-10-12 03:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260052",
+    "event_date": "2026-10-12 04:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260053",
+    "event_date": "2026-10-12 06:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260054",
+    "event_date": "2026-10-12 13:00:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260055",
+    "event_date": "2026-10-12 18:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260056",
+    "event_date": "2026-10-12 21:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260057",
+    "event_date": "2026-10-13 04:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260058",
+    "event_date": "2026-10-13 08:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260059",
+    "event_date": "2026-10-13 18:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260060",
+    "event_date": "2026-10-13 21:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260061",
+    "event_date": "2026-10-13 21:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260062",
+    "event_date": "2026-10-14 04:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260063",
+    "event_date": "2026-10-14 14:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260064",
+    "event_date": "2026-10-14 14:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260065",
+    "event_date": "2026-10-14 19:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260066",
+    "event_date": "2026-10-15 01:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260067",
+    "event_date": "2026-10-15 06:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260068",
+    "event_date": "2026-10-15 09:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260069",
+    "event_date": "2026-10-15 17:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260070",
+    "event_date": "2026-10-15 21:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Conveyor Photoeye Fault",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260071",
+    "event_date": "2026-10-15 22:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260072",
+    "event_date": "2026-10-15 23:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260073",
+    "event_date": "2026-10-16 09:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260074",
+    "event_date": "2026-10-16 14:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260075",
+    "event_date": "2026-10-16 17:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260076",
+    "event_date": "2026-10-16 17:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Conveyor Photoeye Fault",
+    "downtime_min": 60,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260077",
+    "event_date": "2026-10-17 04:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260078",
+    "event_date": "2026-10-17 06:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260079",
+    "event_date": "2026-10-17 13:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260080",
+    "event_date": "2026-10-17 13:45:00",
+    "line_code": "Line_A ",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260081",
+    "event_date": "2026-10-17 18:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260082",
+    "event_date": "2026-10-17 18:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260083",
+    "event_date": "2026-10-18 07:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260084",
+    "event_date": "2026-10-18 11:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260085",
+    "event_date": "2026-10-18 11:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260086",
+    "event_date": "2026-10-18 13:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260087",
+    "event_date": "2026-10-19 06:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260088",
+    "event_date": "2026-10-19 07:45:00",
+    "line_code": "Line_A ",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260089",
+    "event_date": "2026-10-19 08:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260090",
+    "event_date": "2026-10-19 09:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260091",
+    "event_date": "2026-10-20 02:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260092",
+    "event_date": "2026-10-20 04:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260093",
+    "event_date": "2026-10-20 07:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260094",
+    "event_date": "2026-10-20 10:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260095",
+    "event_date": "2026-10-20 19:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260096",
+    "event_date": "2026-10-20 21:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260097",
+    "event_date": "2026-10-21 06:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260098",
+    "event_date": "2026-10-21 10:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260099",
+    "event_date": "2026-10-21 15:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260100",
+    "event_date": "2026-10-21 18:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260101",
+    "event_date": "2026-10-22 01:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260102",
+    "event_date": "2026-10-22 05:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260103",
+    "event_date": "2026-10-22 08:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260104",
+    "event_date": "2026-10-22 17:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260105",
+    "event_date": "2026-10-22 20:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260106",
+    "event_date": "2026-10-23 00:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260107",
+    "event_date": "2026-10-23 03:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260108",
+    "event_date": "2026-10-23 13:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260109",
+    "event_date": "2026-10-23 19:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260110",
+    "event_date": "2026-10-23 21:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260111",
+    "event_date": "2026-10-24 01:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260112",
+    "event_date": "2026-10-24 06:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260113",
+    "event_date": "2026-10-24 12:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260114",
+    "event_date": "2026-10-24 17:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260115",
+    "event_date": "2026-10-24 20:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260116",
+    "event_date": "2026-10-25 03:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260117",
+    "event_date": "2026-10-25 05:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Conveyor Photoeye Fault",
+    "downtime_min": 45,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260118",
+    "event_date": "2026-10-25 05:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260119",
+    "event_date": "2026-10-25 17:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260120",
+    "event_date": "2026-10-25 19:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260121",
+    "event_date": "2026-10-25 20:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260122",
+    "event_date": "2026-10-26 00:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260123",
+    "event_date": "2026-10-26 11:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260124",
+    "event_date": "2026-10-26 14:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260125",
+    "event_date": "2026-10-26 15:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260126",
+    "event_date": "2026-10-26 17:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260127",
+    "event_date": "2026-10-27 05:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260128",
+    "event_date": "2026-10-27 10:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260129",
+    "event_date": "2026-10-27 12:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260130",
+    "event_date": "2026-10-27 16:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260131",
+    "event_date": "2026-10-28 03:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260132",
+    "event_date": "2026-10-28 07:00:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260133",
+    "event_date": "2026-10-28 09:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260134",
+    "event_date": "2026-10-28 10:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260135",
+    "event_date": "2026-10-29 02:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260136",
+    "event_date": "2026-10-29 02:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260137",
+    "event_date": "2026-10-29 05:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260138",
+    "event_date": "2026-10-29 11:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260139",
+    "event_date": "2026-10-29 20:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260140",
+    "event_date": "2026-10-29 22:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260141",
+    "event_date": "2026-10-30 03:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260142",
+    "event_date": "2026-10-30 11:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260143",
+    "event_date": "2026-10-30 14:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260144",
+    "event_date": "2026-10-30 15:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260145",
+    "event_date": "2026-10-31 02:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260146",
+    "event_date": "2026-10-31 07:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260147",
+    "event_date": "2026-10-31 09:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260148",
+    "event_date": "2026-10-31 14:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260149",
+    "event_date": "2026-10-31 22:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260150",
+    "event_date": "2026-11-01 00:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260151",
+    "event_date": "2026-11-01 04:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260152",
+    "event_date": "2026-11-01 10:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260153",
+    "event_date": "2026-11-01 15:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260154",
+    "event_date": "2026-11-01 19:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260155",
+    "event_date": "2026-11-02 01:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260156",
+    "event_date": "2026-11-02 09:00:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260157",
+    "event_date": "2026-11-02 11:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260158",
+    "event_date": "2026-11-02 17:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260159",
+    "event_date": "2026-11-02 20:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260160",
+    "event_date": "2026-11-02 21:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Conveyor Photoeye Fault",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260161",
+    "event_date": "2026-11-03 01:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260162",
+    "event_date": "2026-11-03 03:00:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260163",
+    "event_date": "2026-11-03 17:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260164",
+    "event_date": "2026-11-03 20:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260165",
+    "event_date": "2026-11-03 20:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260166",
+    "event_date": "2026-11-04 01:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260167",
+    "event_date": "2026-11-04 10:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260168",
+    "event_date": "2026-11-04 18:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260169",
+    "event_date": "2026-11-04 21:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260170",
+    "event_date": "2026-11-05 00:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260171",
+    "event_date": "2026-11-05 05:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260172",
+    "event_date": "2026-11-05 17:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260173",
+    "event_date": "2026-11-05 19:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260174",
+    "event_date": "2026-11-05 22:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260175",
+    "event_date": "2026-11-06 01:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260176",
+    "event_date": "2026-11-06 12:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260177",
+    "event_date": "2026-11-06 13:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260178",
+    "event_date": "2026-11-06 20:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260179",
+    "event_date": "2026-11-06 22:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260180",
+    "event_date": "2026-11-07 05:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260181",
+    "event_date": "2026-11-07 09:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260182",
+    "event_date": "2026-11-07 12:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260183",
+    "event_date": "2026-11-07 17:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260184",
+    "event_date": "2026-11-08 02:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260185",
+    "event_date": "2026-11-08 09:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260186",
+    "event_date": "2026-11-08 11:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260187",
+    "event_date": "2026-11-08 11:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260188",
+    "event_date": "2026-11-08 22:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260189",
+    "event_date": "2026-11-09 06:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260190",
+    "event_date": "2026-11-09 10:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260191",
+    "event_date": "2026-11-09 12:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260192",
+    "event_date": "2026-11-09 15:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260193",
+    "event_date": "2026-11-10 03:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260194",
+    "event_date": "2026-11-10 06:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260195",
+    "event_date": "2026-11-10 06:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260196",
+    "event_date": "2026-11-10 10:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260197",
+    "event_date": "2026-11-11 00:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260198",
+    "event_date": "2026-11-11 01:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260199",
+    "event_date": "2026-11-11 08:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260200",
+    "event_date": "2026-11-11 12:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260201",
+    "event_date": "2026-11-11 23:30:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Conveyor Photoeye Fault",
+    "downtime_min": 45,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260202",
+    "event_date": "2026-11-11 23:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260203",
+    "event_date": "2026-11-12 03:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260204",
+    "event_date": "2026-11-12 10:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260205",
+    "event_date": "2026-11-12 14:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260206",
+    "event_date": "2026-11-12 17:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260207",
+    "event_date": "2026-11-12 23:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260208",
+    "event_date": "2026-11-13 00:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 60,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260209",
+    "event_date": "2026-11-13 11:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260210",
+    "event_date": "2026-11-13 14:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260211",
+    "event_date": "2026-11-13 22:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260212",
+    "event_date": "2026-11-14 00:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260213",
+    "event_date": "2026-11-14 08:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260214",
+    "event_date": "2026-11-14 09:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260215",
+    "event_date": "2026-11-14 18:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260216",
+    "event_date": "2026-11-15 01:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260217",
+    "event_date": "2026-11-15 04:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260218",
+    "event_date": "2026-11-15 04:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260219",
+    "event_date": "2026-11-15 17:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260220",
+    "event_date": "2026-11-15 22:00:00",
+    "line_code": "Line_A ",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260221",
+    "event_date": "2026-11-16 04:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260222",
+    "event_date": "2026-11-16 04:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260223",
+    "event_date": "2026-11-16 08:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260224",
+    "event_date": "2026-11-16 17:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260225",
+    "event_date": "2026-11-17 00:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260226",
+    "event_date": "2026-11-17 01:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260227",
+    "event_date": "2026-11-17 01:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260228",
+    "event_date": "2026-11-17 15:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260229",
+    "event_date": "2026-11-17 18:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260230",
+    "event_date": "2026-11-17 21:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260231",
+    "event_date": "2026-11-18 01:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260232",
+    "event_date": "2026-11-18 11:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260233",
+    "event_date": "2026-11-18 14:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260234",
+    "event_date": "2026-11-18 15:30:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260235",
+    "event_date": "2026-11-18 23:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260236",
+    "event_date": "2026-11-19 04:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260237",
+    "event_date": "2026-11-19 07:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260238",
+    "event_date": "2026-11-19 14:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260239",
+    "event_date": "2026-11-19 18:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260240",
+    "event_date": "2026-11-20 00:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260241",
+    "event_date": "2026-11-20 05:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260242",
+    "event_date": "2026-11-20 16:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260243",
+    "event_date": "2026-11-20 17:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260244",
+    "event_date": "2026-11-20 21:30:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260245",
+    "event_date": "2026-11-21 00:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260246",
+    "event_date": "2026-11-21 13:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260247",
+    "event_date": "2026-11-21 15:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260248",
+    "event_date": "2026-11-21 16:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260249",
+    "event_date": "2026-11-21 18:00:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260250",
+    "event_date": "2026-11-22 10:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260251",
+    "event_date": "2026-11-22 10:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260252",
+    "event_date": "2026-11-22 14:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260253",
+    "event_date": "2026-11-22 15:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260254",
+    "event_date": "2026-11-23 05:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260255",
+    "event_date": "2026-11-23 07:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260256",
+    "event_date": "2026-11-23 11:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260257",
+    "event_date": "2026-11-23 16:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260258",
+    "event_date": "2026-11-23 19:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260259",
+    "event_date": "2026-11-24 03:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260260",
+    "event_date": "2026-11-24 06:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 30,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260261",
+    "event_date": "2026-11-24 07:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260262",
+    "event_date": "2026-11-24 10:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260263",
+    "event_date": "2026-11-25 00:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260264",
+    "event_date": "2026-11-25 01:30:00",
+    "line_code": "Line_A ",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260265",
+    "event_date": "2026-11-25 06:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260266",
+    "event_date": "2026-11-25 06:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260267",
+    "event_date": "2026-11-25 17:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260268",
+    "event_date": "2026-11-25 18:15:00",
+    "line_code": "Line_A ",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260269",
+    "event_date": "2026-11-25 23:45:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260270",
+    "event_date": "2026-11-26 01:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260271",
+    "event_date": "2026-11-26 10:00:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260272",
+    "event_date": "2026-11-26 15:15:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260273",
+    "event_date": "2026-11-26 18:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260274",
+    "event_date": "2026-11-26 18:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 90,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260275",
+    "event_date": "2026-11-27 07:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260276",
+    "event_date": "2026-11-27 10:45:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260277",
+    "event_date": "2026-11-27 12:00:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260278",
+    "event_date": "2026-11-27 18:30:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260279",
+    "event_date": "2026-11-28 05:15:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260280",
+    "event_date": "2026-11-28 07:45:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260281",
+    "event_date": "2026-11-28 08:15:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Conveyor Photoeye Fault",
+    "downtime_min": 60,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260282",
+    "event_date": "2026-11-28 12:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260283",
+    "event_date": "2026-11-28 16:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260284",
+    "event_date": "2026-11-29 04:00:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 180,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260285",
+    "event_date": "2026-11-29 06:15:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "unplanned",
+    "root_cause": "Pasteurizer Thermal Trip",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260286",
+    "event_date": "2026-11-29 08:45:00",
+    "line_code": "LINE_A",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260287",
+    "event_date": "2026-11-29 10:15:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20260288",
+    "event_date": "2026-11-30 02:00:00",
+    "line_code": "LN-B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 120,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260289",
+    "event_date": "2026-11-30 02:30:00",
+    "line_code": "LINE_D",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Filler Valve Seal Leak",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  },
+  {
+    "log_id": "STOP-20260001",
+    "event_date": "2026-10-01 07:45:00",
+    "line_code": "LINE_B",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Capper Sensor Drift",
+    "downtime_min": 60,
+    "technician_team": "Maint_Controls"
+  },
+  {
+    "log_id": "STOP-20260002",
+    "event_date": "2026-10-01 19:00:00",
+    "line_code": "LINE_C",
+    "stoppage_type": "Preventive",
+    "root_cause": "Scheduled Valve Seal Overhaul",
+    "downtime_min": 45,
+    "technician_team": "PM_Team_Alpha"
+  },
+  {
+    "log_id": "STOP-20269999",
+    "event_date": "2099-01-01 03:00:00",
+    "line_code": "LINE_Z",
+    "stoppage_type": "Unplanned",
+    "root_cause": "Phantom Log",
+    "downtime_min": 60,
+    "technician_team": "Maint_Mechanical"
+  }
+]
