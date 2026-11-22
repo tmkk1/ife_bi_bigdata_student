@@ -166,6 +166,7 @@ venv.bak/
 
 # Student sandbox outputs (keep directory structure via .gitkeep)
 03_labs_student_starters/sandbox_outputs/**/*.parquet
+!03_labs_student_starters/sandbox_outputs/case0_europack_bottling/bronze_staged/*.parquet
 03_labs_student_starters/sandbox_outputs/**/*.duckdb
 03_labs_student_starters/sandbox_outputs/**/*.csv
 03_labs_student_starters/sandbox_outputs/**/*.dbml

@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import os
 import platform
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -26,6 +27,12 @@ REQUIRED_PACKAGES = [
     ("pydantic", "pydantic"),
     ("rich", "rich"),
     ("tabulate", "tabulate"),
+]
+
+REQUIRED_VSCODE_EXTENSIONS = [
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.datawrangler",
 ]
 
 CASE_RAW_FILES = {
@@ -135,6 +142,122 @@ def check_and_generate_data(repo_root: Path) -> bool:
     return all_present
 
 
+def find_vscode_cli() -> list[str] | None:
+    """Locate the VS Code CLI command across Linux, macOS, and Windows."""
+    sys_name = platform.system()
+    if sys_name == "Windows":
+        cmd = shutil.which("code.cmd") or shutil.which("code")
+        if cmd:
+            return [cmd]
+        local_app = os.environ.get("LocalAppData", "")
+        candidates = [
+            Path(local_app) / "Programs" / "Microsoft VS Code" / "bin" / "code.cmd" if local_app else None,
+            Path(r"C:\Program Files\Microsoft VS Code\bin\code.cmd"),
+        ]
+        for p in candidates:
+            if p and p.exists():
+                return [str(p)]
+        return None
+
+    cmd = shutil.which("code")
+    if cmd:
+        return [cmd]
+
+    if sys_name == "Darwin":
+        candidates = [
+            Path("/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"),
+            Path.home() / "Applications" / "Visual Studio Code.app" / "Contents" / "Resources" / "app" / "bin" / "code",
+        ]
+        for p in candidates:
+            if p.is_file() and os.access(p, os.X_OK):
+                return [str(p)]
+        return None
+
+    # Linux fallbacks (including Snap, user-local tarball, and Flatpak)
+    candidates = [
+        Path("/usr/bin/code"),
+        Path("/snap/bin/code"),
+        Path("/usr/local/bin/code"),
+        Path.home() / ".local" / "bin" / "code",
+        Path.home() / ".local" / "opt" / "vscode" / "bin" / "code",
+    ]
+    for p in candidates:
+        if p.is_file() and os.access(p, os.X_OK):
+            return [str(p)]
+
+    flatpak = shutil.which("flatpak")
+    if flatpak:
+        try:
+            res = subprocess.run(
+                [flatpak, "info", "com.visualstudio.code"],
+                capture_output=True,
+                text=True,
+                timeout=10,
+                check=False,
+            )
+            if res.returncode == 0:
+                return [flatpak, "run", "com.visualstudio.code"]
+        except (OSError, subprocess.TimeoutExpired):
+            pass
+
+    return None
+
+
+def check_vscode_and_extensions() -> tuple[bool, list[str]]:
+    """Check VS Code availability and required extensions without failing the script."""
+    code_cmd = find_vscode_cli()
+    if not code_cmd:
+        print("  [WARN] Visual Studio Code ('code' CLI) not found.")
+        ext_cmds = "; ".join(f"code --install-extension {ext}" for ext in REQUIRED_VSCODE_EXTENSIONS)
+        return False, [
+            "Install Visual Studio Code from https://code.visualstudio.com/download (or re-run the setup script).",
+            f"Install required VS Code extensions ({', '.join(REQUIRED_VSCODE_EXTENSIONS)}): {ext_cmds}",
+        ]
+
+    code_display = " ".join(code_cmd)
+    print(f"  [OK]   VS Code CLI                 ({code_display})")
+
+    try:
+        res = subprocess.run(
+            [*code_cmd, "--list-extensions"],
+            capture_output=True,
+            text=True,
+            timeout=20,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        print(f"  [WARN] Could not query installed VS Code extensions ({exc}).")
+        return False, [
+            "Open VS Code -> Extensions sidebar and install: ms-python.python, ms-toolsai.jupyter, ms-toolsai.datawrangler."
+        ]
+
+    if res.returncode != 0:
+        print("  [WARN] Could not query installed VS Code extensions.")
+        return False, [
+            "Open VS Code -> Extensions sidebar and install: ms-python.python, ms-toolsai.jupyter, ms-toolsai.datawrangler."
+        ]
+
+    installed = {line.strip().lower() for line in res.stdout.splitlines() if line.strip()}
+    missing_exts: list[str] = []
+    for ext in REQUIRED_VSCODE_EXTENSIONS:
+        if ext.lower() in installed:
+            print(f"  [OK]   {ext:<28} (installed)")
+        else:
+            print(f"  [WARN] {ext:<28} MISSING")
+            missing_exts.append(ext)
+
+    if missing_exts:
+        cli_prefix = "flatpak run com.visualstudio.code" if code_cmd[0].endswith("flatpak") else "code"
+        steps = [
+            f"Install missing VS Code extension '{ext}': {cli_prefix} --install-extension {ext}"
+            for ext in missing_exts
+        ]
+        steps.append("Or install them inside VS Code via the Extensions sidebar (Ctrl+Shift+X / Cmd+Shift+X).")
+        return False, steps
+
+    return True, []
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parent
 
@@ -147,8 +270,12 @@ def main() -> int:
     print_header("3. COURSE STRUCTURE & RAW BRONZE DATA CHECK")
     data_ok = check_and_generate_data(repo_root)
 
+    print_header("4. VS CODE & EXTENSIONS CHECK")
+    vscode_ok, missing_vscode_steps = check_vscode_and_extensions()
+
     print_header("SUMMARY")
-    if py_ok and pkg_ok and data_ok:
+    core_ok = py_ok and pkg_ok and data_ok
+    if core_ok and vscode_ok:
         print("  SUCCESS! Your laptop is 100% ready for the BI & Big Data labs.")
         print("  Next step:")
         print("    1. Open this folder in VS Code.")
@@ -157,13 +284,25 @@ def main() -> int:
         print("    4. Select the '.venv' kernel in the top-right corner of each notebook.")
         print("=" * 68 + "\n")
         return 0
+    elif core_ok:
+        print("  PARTIAL SUCCESS: Python, libraries, and raw Bronze datasets are ready,")
+        print("  but VS Code setup is incomplete (your laptop is NOT 100% ready yet).")
+        print("\n  Missing step(s):")
+        for idx, step_msg in enumerate(missing_vscode_steps, start=1):
+            print(f"    {idx}. {step_msg}")
+        print(f"\n  Tip: You can also start JupyterLab immediately via: {sys.executable} -m jupyterlab")
+        print("=" * 68 + "\n")
+        return 0
     else:
-        print("  WARNING: Some checks failed. Please review the messages above")
+        print("  WARNING: Some core checks failed. Please review the messages above")
         print("  or re-run setup_windows.bat (Windows) / ./setup_macos.sh (macOS) / ./setup_linux.sh (Linux).")
+        if missing_vscode_steps:
+            print("\n  Missing VS Code step(s):")
+            for idx, step_msg in enumerate(missing_vscode_steps, start=1):
+                print(f"    {idx}. {step_msg}")
         print("=" * 68 + "\n")
         return 1
 
 
 if __name__ == "__main__":
     sys.exit(main())
-
