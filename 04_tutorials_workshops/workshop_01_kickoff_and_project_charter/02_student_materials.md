@@ -129,3 +129,27 @@ At the start of **Tutorial #2 (Wed, 2 December 2026, In-Person)**, each team has
 2. **Operational Problem (`~25s`):** *"Our main operational problem is [defined business pain, e.g., uncontrolled 1.5× overtime costs driven by sudden absences and uncertified shift gaps]."*
 3. **BI Decision & Solution (`~25s`):** *"Thanks to our BI solution, the board will be able to make the key decision to: [specific managerial intervention unlocked by BI]."*
 4. **Success Metrics / KPIs (`~25s`):** *"We will measure success with specific indicators: [your 3–4 target KPIs and benchmarks]."*
+
+---
+
+## 6. Final Graded Project & Boardroom Defense (`15 min`)
+
+You do **not** have two separate projects for Tutorials and Labs — you deliver **one integrated 5-person BI project** uniting business architecture with a working technical solution.
+
+### 6.1 Expected End-to-End Scope of Deliverables
+
+| Pillar | What Your Team Must Deliver (Plain-English Checklist) | Key Milestone |
+| :--- | :--- | :--- |
+| **1. Business & Architecture *(Tutorials)*** | • **Project Charter:** Your 6-section agreement defining the problem, goal, In/Out-of-Scope boundaries, 3–4 KPIs, risks, and 5 team roles.<br>• **Data Model & Data Rules:** Conceptual Data Model (`5+` relationships with cardinality), Logical Model Data Dictionary (`3+` entities × `5+` attributes), Data Quality Rules Matrix, and a mapping from your model to the real raw Bronze files.<br>• **KPIs & Dashboard Design:** Clear business definitions + alert thresholds for your KPIs, dashboard wireframes designed for your assigned **Persona (A or B)**, and a clear executive story. | Tutorials #1 – #6 *(Nov – Jan)* |
+| **2. Working BI Solution *(Labs)*** | • **Clean Data Pipeline (Bronze → Silver):** Load and clean all 3 raw files (`CSV + JSON + XLSX`), save rejected/bad rows in a **Quarantine Log** (`quarantine_errors.parquet`) instead of silently deleting them, and remove all personal/medical data (**strict 0-PII** for Nexis).<br>• **Analytics Database (Gold Star Schema):** Build a clean **DuckDB** Star Schema (matching your `schema.dbml`) with no double-counting errors, plus verified SQL KPI views.<br>• **Interactive Dashboard (`Streamlit`):** Works offline with working filters, charts built for your Persona, and a **Tab 3: Data Quality & Privacy Audit** view. | **Code Freeze:** `Tue, 19 Jan 2027` *(Lab 10)* |
+| **3. Boardroom Defense *(Final Exam)*** | • **15-minute slot per team** (`10 min` presentation + `5 min` Q&A).<br>• **What your `10-minute` presentation MUST include:**<br>&nbsp;&nbsp;1. **Context, Problem & Persona:** Brief company context, the main business problem, and who you are advising (Perspective **A** or **B**).<br>&nbsp;&nbsp;2. **Data Management Story:** A short walkthrough of the stages your team completed — from messy raw files, data cleaning, quarantine & privacy (`0-PII`), to your Star Schema.<br>&nbsp;&nbsp;3. **Live Dashboard Insights:** What you discovered by analyzing the data, demonstrated **live** on your Streamlit dashboard.<br>&nbsp;&nbsp;4. **Recommendations for Your Persona:** Concrete, practical actions your executive sponsor should take next (with expected business / EUR impact).<br>• **`5-minute` Q&A & Live Filter Check:** Answer boardroom questions and filter your dashboard live within 60 seconds.<br>• **Full Team Participation:** Every team member must speak and defend their part. | **Defense:** `Wed, 27 Jan 2027` *(Tutorial #7)* |
+
+### 6.2 Evaluation Areas
+
+Your project is evaluated across four core areas matching the deliverables above:
+
+* **Data Engineering, Quality & Privacy:** Clean ingestion of all raw files (`CSV + JSON + XLSX`), proper error handling via the **Quarantine Log** (`quarantine_errors.parquet`), and **mandatory `0-PII` compliance** *(any personal/medical data leak blocks sign-off)*.
+* **Data Modeling, Star Schema & KPI Accuracy:** Clear Conceptual/Logical Model, Data Dictionary & source mapping, `schema.dbml` matching your **DuckDB Star Schema** with no double-counting errors, and accurate SQL KPI calculations.
+* **Dashboard UX & Storytelling:** Clean, easy-to-read layout (*5-second rule*), working dynamic filters, strict focus on your assigned **Persona (A or B)**, and a clear **Tab 3: Data Quality & Privacy Audit** view.
+* **Business Insights, Recommendations & Live Defense:** Clear **Data Management Story**, genuine data insights shown live on your Streamlit dashboard, practical recommendations for your Persona (with expected business / EUR impact), and confident live Q&A + 60-second filter handling.
+

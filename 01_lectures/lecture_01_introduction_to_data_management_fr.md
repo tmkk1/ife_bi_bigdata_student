@@ -22,7 +22,7 @@
   * **30 %** — Ingénierie des données, DAMA DQ (`Proces DQ Gate 1`), Quarantaine & Confidentialité (`Zéro PII`)
   * **30 %** — Modèle dimensionnel Kimball (`DBML == DuckDB`), architecture anti-inflation (*anti-fan-out*) & rigueur mathématique des KPI
   * **25 %** — Ergonomie du cockpit Dual-Track (`Onglet 1 / Onglet 2 / Onglet 3`), perceptibilité visuelle & interactivité dynamique
-  * **15 %** — Perspicacité métier (ROI €), gouvernance décisionnelle & Q&R de soutenance en direct (`17 min` : `12m` présentation/démo + `5m` questions & exercice de crise de `60s`)
+  * **15 %** — Perspicacité métier (ROI €), gouvernance décisionnelle & Q&R de soutenance en direct (`15 min` : `10m` présentation/démo + `5m` questions & exercice de crise de `60s`)
 * **Régime d'Assiduité :** Présence obligatoire aux Travaux Pratiques et Travaux Dirigés (**assiduité minimale de `80 %`** et **tolérance maximale de `2` absences non justifiées** sur l'ensemble du semestre). Un quorum d'au moins $50\%$ des membres de chaque équipe doit impérativement être réuni à chaque séance.
 * **Charte relative à l'Intelligence Artificielle (Arrêté Rectoral n° 31/2025) :**
   * *Usages Autorisés :* Assistance à la syntaxe de programmation, débogage de code, optimisation algorithmique et séances de remue-méninges conceptuel.
