@@ -168,6 +168,7 @@ venv.bak/
 03_labs_student_starters/sandbox_outputs/**/*.parquet
 !03_labs_student_starters/sandbox_outputs/case0_europack_bottling/bronze_staged/*.parquet
 !03_labs_student_starters/sandbox_outputs/case0_europack_bottling/silver_part1/*.parquet
+!03_labs_student_starters/sandbox_outputs/case0_europack_bottling/silver/*.parquet
 03_labs_student_starters/sandbox_outputs/**/*.duckdb
 03_labs_student_starters/sandbox_outputs/**/*.csv
 03_labs_student_starters/sandbox_outputs/**/*.dbml

@@ -54,10 +54,22 @@ Write-Host "  Architecture     : $($osInfo.OSArchitecture)"
 
 # Allow activating .venv in VS Code PowerShell terminals without PSSecurityException
 try {
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force -ErrorAction SilentlyContinue
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force -ErrorAction Stop
     Write-Ok "PowerShell ExecutionPolicy set to RemoteSigned for CurrentUser."
 } catch {
-    Write-Info "Could not persist ExecutionPolicy (may be managed by group policy); continuing in Bypass mode."
+    # When launched with '-Scope Process Bypass', PowerShell persists CurrentUser
+    # before raising a scope-override warning. Check the actual policies instead of guessing.
+    $cuPolicy = [string](Get-ExecutionPolicy -Scope CurrentUser)
+    $mpPolicy = [string](Get-ExecutionPolicy -Scope MachinePolicy)
+    $upPolicy = [string](Get-ExecutionPolicy -Scope UserPolicy)
+    if ($mpPolicy -in @("Restricted", "AllSigned") -or $upPolicy -in @("Restricted", "AllSigned")) {
+        Write-Info "PowerShell ExecutionPolicy is restricted by Group Policy (MachinePolicy=$mpPolicy, UserPolicy=$upPolicy)."
+        Write-Info "If .venv does not auto-activate in VS Code terminal, run commands directly with: .\.venv\Scripts\python.exe"
+    } elseif ($cuPolicy -in @("RemoteSigned", "Unrestricted", "Bypass")) {
+        Write-Ok "PowerShell ExecutionPolicy is '$cuPolicy' for CurrentUser."
+    } else {
+        Write-Info "Could not persist ExecutionPolicy (CurrentUser=$cuPolicy); continuing in Bypass mode."
+    }
 }
 
 $hasWinget = $null -ne (Get-Command winget -ErrorAction SilentlyContinue)
@@ -68,20 +80,43 @@ if ($hasWinget) {
 }
 
 # ---------------------------------------------------------------------------
-# STEP 2: Check / Install Python (3.11+)
+# STEP 2: Check / Install Python (Requires 64-bit Python 3.11-3.13 with venv)
 # ---------------------------------------------------------------------------
-Write-Step "STEP 2: Checking Python Installation (Requires Python 3.11+)"
+Write-Step "STEP 2: Checking Python Installation (Requires 64-bit Python 3.11-3.13)"
+
+$pyCheckCode = "import sys, venv, ensurepip; ok = (3,11) <= sys.version_info < (3,14) and sys.maxsize > 2**32; print(sys.executable if ok else '')"
+
+function Test-PythonCandidate([string]$ExePath) {
+    if (-not $ExePath -or ($ExePath -match "WindowsApps") -or (-not (Test-Path $ExePath))) {
+        return $null
+    }
+    try {
+        $out = & $ExePath -c $pyCheckCode 2>$null
+        $outLine = ($out | Where-Object { $_ } | Select-Object -Last 1)
+        if ($LASTEXITCODE -eq 0 -and $outLine) {
+            $resolved = $outLine.ToString().Trim()
+            if ($resolved -and ($resolved -notmatch "WindowsApps") -and (Test-Path $resolved)) {
+                return $resolved
+            }
+        }
+    } catch {}
+    return $null
+}
 
 function Find-ValidPython {
     Refresh-SessionPath
 
-    # 1. Check py launcher for 3.12, 3.11, 3.13
+    # 1. Check py launcher for 3.12, 3.11, 3.13, 3 (64-bit, < 3.14 for binary wheels, excluding Store stub)
     if (Get-Command py -ErrorAction SilentlyContinue) {
         foreach ($ver in @("-3.12", "-3.11", "-3.13", "-3")) {
             try {
-                $out = & py $ver -c "import sys; print(sys.executable if sys.version_info >= (3,11) else '')" 2>$null
-                if ($LASTEXITCODE -eq 0 -and $out -and (Test-Path $out.Trim())) {
-                    return $out.Trim()
+                $out = & py $ver -c $pyCheckCode 2>$null
+                $outLine = ($out | Where-Object { $_ } | Select-Object -Last 1)
+                if ($LASTEXITCODE -eq 0 -and $outLine) {
+                    $resolved = $outLine.ToString().Trim()
+                    if ($resolved -and ($resolved -notmatch "WindowsApps") -and (Test-Path $resolved)) {
+                        return $resolved
+                    }
                 }
             } catch {}
         }
@@ -90,36 +125,40 @@ function Find-ValidPython {
     # 2. Check python command (ignoring Windows Store stub in WindowsApps)
     if (Get-Command python -ErrorAction SilentlyContinue) {
         try {
-            $out = & python -c "import sys; print(sys.executable if sys.version_info >= (3,11) else '')" 2>$null
-            if ($LASTEXITCODE -eq 0 -and $out -and ($out -notmatch "WindowsApps") -and (Test-Path $out.Trim())) {
-                return $out.Trim()
+            $out = & python -c $pyCheckCode 2>$null
+            $outLine = ($out | Where-Object { $_ } | Select-Object -Last 1)
+            if ($LASTEXITCODE -eq 0 -and $outLine) {
+                $resolved = $outLine.ToString().Trim()
+                if ($resolved -and ($resolved -notmatch "WindowsApps") -and (Test-Path $resolved)) {
+                    return $resolved
+                }
             }
         } catch {}
     }
 
-    # 3. Check standard install directories
+    # 3. Check standard install directories (3.11-3.13 only, validated for 64-bit + venv + ensurepip)
     $candidates = @(
         "$env:LocalAppData\Programs\Python\Python312\python.exe",
         "$env:LocalAppData\Programs\Python\Python311\python.exe",
         "$env:LocalAppData\Programs\Python\Python313\python.exe",
-        "$env:LocalAppData\Programs\Python\Python310\python.exe",
         "C:\Program Files\Python312\python.exe",
         "C:\Program Files\Python311\python.exe",
-        "C:\Program Files\Python313\python.exe",
-        "C:\Program Files\Python310\python.exe"
+        "C:\Program Files\Python313\python.exe"
     )
     foreach ($c in $candidates) {
-        if (Test-Path $c) {
-            return $c
+        $valid = Test-PythonCandidate $c
+        if ($valid) {
+            return $valid
         }
     }
     return $null
 }
 
+$pythonInstalledThisRun = $false
 $pythonExe = Find-ValidPython
 
 if (-not $pythonExe) {
-    Write-Info "Compatible Python (3.11+) not found. Installing Python 3.12..."
+    Write-Info "Compatible 64-bit Python (3.11-3.13 with venv) not found. Installing Python 3.12..."
     if ($hasWinget) {
         try {
             winget install -e --id Python.Python.3.12 --scope user --accept-package-agreements --accept-source-agreements
@@ -137,11 +176,14 @@ if (-not $pythonExe) {
         Start-Process -FilePath $pyInstallerPath -ArgumentList "/quiet InstallAllUsers=0 PrependPath=1 Include_test=0 Include_launcher=1" -Wait
         $pythonExe = Find-ValidPython
     }
+    if ($pythonExe) {
+        $pythonInstalledThisRun = $true
+    }
 }
 
 if (-not $pythonExe) {
-    Write-Err "Python 3.11+ could not be installed automatically. Please install Python 3.12 from https://www.python.org/downloads/ (check 'Add python.exe to PATH') and re-run."
-    exit 1
+    Write-Err "Compatible 64-bit Python 3.11-3.13 could not be installed automatically. Please install Python 3.12 (64-bit) from https://www.python.org/downloads/ (check 'Add python.exe to PATH') and re-run."
+    if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
 }
 
 $pyVer = & $pythonExe --version
@@ -189,14 +231,62 @@ if (-not $codeCmd) {
     }
 }
 
+$vscodeWasRunning = $null -ne (Get-Process -Name "Code" -ErrorAction SilentlyContinue)
+$extensionsInstalledNow = @()
+$missingExtensions = @()
+$requiredExtensions = @("ms-python.python", "ms-toolsai.jupyter", "ms-toolsai.datawrangler")
+
 if ($codeCmd) {
     Write-Ok "VS Code found at: $codeCmd"
-    Write-Info "Installing required VS Code extensions (Python, Jupyter & Data Wrangler)..."
+    Write-Info "Checking required VS Code extensions (Python, Jupyter & Data Wrangler)..."
     try {
-        & $codeCmd --install-extension ms-python.python --force
-        & $codeCmd --install-extension ms-toolsai.jupyter --force
-        & $codeCmd --install-extension ms-toolsai.datawrangler --force
-        Write-Ok "VS Code Python, Jupyter & Data Wrangler extensions installed."
+        $installedExts = @()
+        try {
+            $rawExts = & $codeCmd --list-extensions 2>$null
+            if ($LASTEXITCODE -eq 0 -and $rawExts) {
+                $installedExts = @($rawExts | ForEach-Object { $_.ToString().Trim().ToLowerInvariant() } | Where-Object { $_ })
+            }
+        } catch {}
+
+        foreach ($ext in $requiredExtensions) {
+            if ($installedExts -contains $ext.ToLowerInvariant()) {
+                Write-Ok "VS Code extension already installed: $ext"
+            } else {
+                Write-Info "Installing VS Code extension: $ext..."
+                & $codeCmd --install-extension $ext --force
+                if ($LASTEXITCODE -eq 0) {
+                    $extensionsInstalledNow += $ext
+                } else {
+                    Write-Info "Extension install returned exit code $LASTEXITCODE for $ext."
+                }
+            }
+        }
+
+        $finalExts = @()
+        $finalListOk = $false
+        try {
+            $rawFinal = & $codeCmd --list-extensions 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                $finalListOk = $true
+                if ($rawFinal) {
+                    $finalExts = @($rawFinal | ForEach-Object { $_.ToString().Trim().ToLowerInvariant() } | Where-Object { $_ })
+                }
+            }
+        } catch {}
+
+        if ($finalListOk) {
+            foreach ($ext in $requiredExtensions) {
+                if ($finalExts -notcontains $ext.ToLowerInvariant()) {
+                    $missingExtensions += $ext
+                }
+            }
+        }
+
+        if ($missingExtensions.Count -eq 0) {
+            Write-Ok "VS Code Python, Jupyter & Data Wrangler extensions ready."
+        } else {
+            Write-Info "Missing VS Code extension(s): $($missingExtensions -join ', '). You can install them from the Extensions tab in VS Code."
+        }
     } catch {
         Write-Info "Could not install extensions via CLI; you can install 'Python' and 'Jupyter' from the Extensions tab in VS Code."
     }
@@ -313,21 +403,78 @@ $venvPython = Join-Path $venvDir "Scripts\python.exe"
 if (-not (Test-Path $venvPython)) {
     Write-Info "Creating virtual environment in $venvDir..."
     & $pythonExe -m venv .venv
+    if ($LASTEXITCODE -ne 0) {
+        Write-Err "Virtual environment creation failed (exit code $LASTEXITCODE)."
+        Pop-Location
+        if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
+    }
 }
 
 if (-not (Test-Path $venvPython)) {
     Write-Err "Failed to create .venv at $venvDir"
     Pop-Location
-    exit 1
+    if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
 }
-Write-Ok "Virtual environment created: $venvPython"
 
-Write-Info "Upgrading pip and installing course requirements (pandas, duckdb, pyarrow, plotly, jupyter, ipykernel)..."
-& $venvPython -m pip install --upgrade pip
-& $venvPython -m pip install --prefer-binary -r requirements.txt ipykernel
+# Verify pip is present inside .venv (guards against half-created venvs where ensurepip failed)
+$hasVenvPip = $false
+try {
+    & $venvPython -m pip --version 2>$null | Out-Null
+    $hasVenvPip = ($LASTEXITCODE -eq 0)
+} catch {
+    $hasVenvPip = $false
+}
+if (-not $hasVenvPip) {
+    Write-Info "pip not found inside .venv; bootstrapping with ensurepip..."
+    & $venvPython -m ensurepip --upgrade
+    if ($LASTEXITCODE -ne 0) {
+        Write-Err "pip is not available inside $venvDir. Delete the .venv folder and re-run setup."
+        Pop-Location
+        if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
+    }
+}
+Write-Ok "Virtual environment ready: $venvPython"
+
+# Neutralize user-level PIP_USER / pip.ini user=true overrides that break installs inside .venv
+$prevPipUser = $env:PIP_USER
+$prevPipReqVenv = $env:PIP_REQUIRE_VIRTUALENV
+try {
+    $env:PIP_USER = "0"
+    $env:PIP_REQUIRE_VIRTUALENV = "0"
+
+    Write-Info "Upgrading pip and installing course requirements (pandas, duckdb, pyarrow, plotly, jupyter, ipykernel)..."
+    & $venvPython -m pip install --upgrade pip --retries 5 --timeout 60
+    if ($LASTEXITCODE -ne 0) {
+        Write-Info "pip self-upgrade returned exit code $LASTEXITCODE; continuing with existing pip in .venv."
+    }
+
+    $pipInstallArgs = @("-m", "pip", "install", "--prefer-binary", "--retries", "10", "--timeout", "60", "-r", "requirements.txt", "ipykernel")
+    & $venvPython @pipInstallArgs
+    if ($LASTEXITCODE -ne 0) {
+        Write-Info "Package installation returned exit code $LASTEXITCODE. Retrying once..."
+        Start-Sleep -Seconds 3
+        & $venvPython @pipInstallArgs
+    }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Err "Failed to install required Python packages into .venv (exit code $LASTEXITCODE)."
+        Write-Host "  Manual retry command (no terminal activation needed):" -ForegroundColor Yellow
+        Write-Host "    `"$venvPython`" -m pip install --prefer-binary -r requirements.txt ipykernel" -ForegroundColor Yellow
+        Pop-Location
+        if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
+    }
+    Write-Ok "All required Python packages installed into .venv."
+} finally {
+    if ($null -eq $prevPipUser) { Remove-Item Env:PIP_USER -ErrorAction SilentlyContinue } else { $env:PIP_USER = $prevPipUser }
+    if ($null -eq $prevPipReqVenv) { Remove-Item Env:PIP_REQUIRE_VIRTUALENV -ErrorAction SilentlyContinue } else { $env:PIP_REQUIRE_VIRTUALENV = $prevPipReqVenv }
+}
 
 Write-Info "Registering .venv as a Jupyter Notebook Kernel..."
 & $venvPython -m ipykernel install --user --name "ife-bi-venv" --display-name "Python (.venv - BI & Big Data)"
+if ($LASTEXITCODE -ne 0) {
+    Write-Err "Failed to register Jupyter kernel (exit code $LASTEXITCODE)."
+    Pop-Location
+    if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
+}
 Write-Ok "Jupyter Kernel registered."
 
 # Configure VS Code workspace settings so .venv is selected automatically
@@ -339,6 +486,7 @@ $settingsJson = @'
 {
     "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
     "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
     "jupyter.jupyterServerType": "local"
 }
 '@
@@ -350,11 +498,38 @@ Write-Ok "Configured .vscode/settings.json to auto-select .venv interpreter."
 # ---------------------------------------------------------------------------
 Write-Step "STEP 6: Running Environment & Data Verification"
 
+$verifyOk = $true
 if (Test-Path (Join-Path $repoRoot "verify_environment.py")) {
     & $venvPython verify_environment.py
+    if ($LASTEXITCODE -ne 0) {
+        $verifyOk = $false
+    }
 }
 
 Pop-Location
+
+if (-not $verifyOk) {
+    Write-Err "Environment verification reported errors (see [FAIL] items above)."
+    Write-Info "Please review the output above or re-run the setup script before opening notebooks in VS Code."
+    Write-Host "  Workspace folder : $repoRoot" -ForegroundColor Yellow
+    Write-Host "  Manual fix       : `"$venvPython`" -m pip install --prefer-binary -r `"$repoRoot\requirements.txt`" ipykernel" -ForegroundColor Yellow
+    if ($MyInvocation.MyCommand.Path) { exit 1 } else { return }
+}
+
+Write-Host ""
+Write-Host "====================================================================" -ForegroundColor Yellow
+Write-Host "  IMPORTANT WHEN VS CODE OPENS:" -ForegroundColor Yellow
+Write-Host "  1. When prompted 'Do you trust the authors of the files in this" -ForegroundColor Yellow
+Write-Host "     folder?', check 'Trust the authors of all files in the parent" -ForegroundColor Yellow
+Write-Host "     folder Courses' and click 'Yes, I trust the authors'." -ForegroundColor Yellow
+Write-Host "     (In Restricted Mode, VS Code hides .venv from Jupyter kernels" -ForegroundColor Yellow
+Write-Host "     and disables automatic terminal activation!)" -ForegroundColor Yellow
+if ($vscodeWasRunning -and ($pythonInstalledThisRun -or $extensionsInstalledNow.Count -gt 0)) {
+    Write-Host "  2. VS Code was already open while Python/extensions were updated." -ForegroundColor Yellow
+    Write-Host "     Please CLOSE ALL VS Code windows and reopen this folder if" -ForegroundColor Yellow
+    Write-Host "     '.venv' does not appear in Select Kernel immediately." -ForegroundColor Yellow
+}
+Write-Host "====================================================================" -ForegroundColor Yellow
 
 if ($codeCmd) {
     Write-Info "Launching Visual Studio Code in $repoRoot..."

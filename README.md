@@ -34,6 +34,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercont
 2. Double-click **`setup_windows.bat`**.
    *(If Windows SmartScreen asks "Windows protected your PC", click **More info** ➔ **Run anyway**).*
 
+> **⚠️ Important When VS Code Opens:** When VS Code asks *"Do you trust the authors of the files in this folder?"*, check **"Trust the authors of all files in the parent folder `Courses`"** and click **"Yes, I trust the authors"**. If VS Code stays in **Restricted Mode**, it hides `.venv` from the Jupyter kernel picker and disables automatic `.venv` activation in the terminal. If VS Code was already open while setup ran, close and reopen VS Code once.
+
 ---
 
 ### 🍎 For macOS (Apple Silicon M1/M2/M3/M4 & Intel — With or Without Xcode)
@@ -187,6 +189,7 @@ python verify_environment.py
 | **macOS:** `SSL: CERTIFICATE_VERIFY_FAILED` when running `pip install` | Official `python.org` macOS installer needs its root certificates initialized. | Run: `sh "/Applications/Python 3.12/Install Certificates.command"` in Terminal. |
 | **Linux (Ubuntu/Debian):** `The virtual environment was not created successfully because ensurepip is not available` | Debian/Ubuntu splits the `venv` module out of base Python. | Run `sudo apt-get install -y python3-venv` (or run `./setup_linux.sh`), remove any half-created `.venv`, and retry. |
 | **macOS / Windows:** Imports inside `.venv` hang or fail with `ModuleNotFoundError` after closing the laptop | Project was placed inside iCloud `~/Documents` or OneDrive `Documents`, which offloaded files inside `.venv`. | Move the course folder to `~/Courses` (macOS) or `C:\Users\<you>\Courses` (Windows) and delete/recreate `.venv`. |
+| **VS Code (Windows):** `.venv` is missing from **Select Kernel** or not activated in the terminal | VS Code opened the new dated folder in **Restricted Mode** (untrusted), or extensions were updated while VS Code was already open. | Click **"Restricted Mode"** (bottom-left status bar) ➔ **"Trust"** (check parent folder `Courses`), then restart VS Code. To install/verify without terminal activation, run `.\.venv\Scripts\python.exe -m pip install --prefer-binary -r requirements.txt ipykernel` and `.\.venv\Scripts\python.exe verify_environment.py`. |
 | **VS Code:** Running a cell says *"Running cells with '.venv' requires the ipykernel package"* | `ipykernel` is missing or the wrong kernel is selected. | Activate `.venv` in terminal and run `pip install ipykernel`, then click the kernel name in the top-right of the notebook and pick `.venv`. |
 | **Notebook:** `Raw Bronze Directory exists: False` or `FileNotFoundError` | You opened a single downloaded `.ipynb` file outside the repo structure, or raw data wasn't generated. | Open the entire `ife_bi_bigdata_student` folder in VS Code (`File ➔ Open Folder...`) and run `python verify_environment.py`. |
 
